@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1",
+    "name": "Madrid Tech Hub",
+    "slug": "madrid-tech-hub",
+    "shortDescription": "Comunidad tecnológica de Madrid enfocada en startups y emprendimiento",
+    "fullDescription": "Madrid Tech Hub es una comunidad vibrante de desarrolladores, emprendedores y profesionales tech en Madrid. Organizamos eventos, meetups y networking para conectar a la comunidad tecnológica de la capital.",
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "province": "Madrid",
+    "category": "Tech Community",
+    "website": "https://madridtechhub.com",
+    "twitter": "madridtechhub",
+    "members": [
+      {
+        "name": "Ana García",
+        "github": "anagarcia",
+        "twitter": "ana_garcia_dev"
+      },
+      {
+        "name": "Carlos Ruiz",
+        "github": "carlosruiz",
+        "twitter": "carlos_dev"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Barcelona Developers",
+    "slug": "barcelona-developers",
+    "shortDescription": "Comunidad de desarrolladores de Barcelona",
+    "fullDescription": "Barcelona Developers es una comunidad inclusiva de desarrolladores de software en Barcelona. Nos enfocamos en compartir conocimiento, crear networking y fomentar el crecimiento profesional.",
+    "location": {
+      "lat": 41.3851,
+      "lng": 2.1734
+    },
+    "province": "Barcelona",
+    "category": "Tech Community",
+    "website": "https://barcelonadev.com",
+    "twitter": "bcndevs",
+    "members": [
+      {
+        "name": "Maria López",
+        "github": "marialopez",
+        "twitter": "maria_bcn"
+      },
+      {
+        "name": "Jordi Martínez",
+        "github": "jordimartinez",
+        "twitter": "jordi_dev"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Valencia Tech Valley",
+    "slug": "valencia-tech-valley",
+    "shortDescription": "Ecosistema tecnológico de Valencia",
+    "fullDescription": "Valencia Tech Valley es una iniciativa para fomentar el ecosistema tecnológico de Valencia. Conectamos startups, desarrolladores y empresas tech de la Comunidad Valenciana.",
+    "location": {
+      "lat": 39.4699,
+      "lng": -0.3763
+    },
+    "province": "Valencia",
+    "category": "Tech Community",
+    "website": "https://valenciatechvalley.com",
+    "twitter": "vlctechvalley",
+    "members": [
+      {
+        "name": "Vicente Pérez",
+        "github": "vicenteperez",
+        "twitter": "vicente_vlc"
+      },
+      {
+        "name": "Carmen Sánchez",
+        "github": "carmensanchez",
+        "twitter": "carmen_dev"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Sevilla Tech Community",
+    "slug": "sevilla-tech-community",
+    "shortDescription": "Comunidad tecnológica de Sevilla",
+    "fullDescription": "Sevilla Tech Community agrupa a profesionales y entusiastas de la tecnología en Sevilla y Andalucía. Organizamos eventos, talleres y meetups para fomentar la innovación tecnológica.",
+    "location": {
+      "lat": 37.3886,
+      "lng": -5.9823
+    },
+    "province": "Sevilla",
+    "category": "Tech Community",
+    "website": "https://sevillatech.com",
+    "twitter": "sevillatech",
+    "members": [
+      {
+        "name": "Antonio Jiménez",
+        "github": "antoniojimenez",
+        "twitter": "antonio_sev"
+      },
+      {
+        "name": "Rocío Morales",
+        "github": "rociomorales",
+        "twitter": "rocio_dev"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Bilbao Innovation Hub",
+    "slug": "bilbao-innovation-hub",
+    "shortDescription": "Hub de innovación y tecnología en Bilbao",
+    "fullDescription": "Bilbao Innovation Hub es un espacio de encuentro para innovadores, desarrolladores y empresarios tecnológicos del País Vasco. Promovemos la colaboración y el intercambio de ideas.",
+    "location": {
+      "lat": 43.2627,
+      "lng": -2.9253
+    },
+    "province": "Vizcaya",
+    "category": "Innovation Hub",
+    "website": "https://bilbaoinnovation.com",
+    "twitter": "bilbaoinnovation",
+    "members": [
+      {
+        "name": "Aitor Etxebarria",
+        "github": "aitoretxebarria",
+        "twitter": "aitor_bilbao"
+      },
+      {
+        "name": "Maite Urrutia",
+        "github": "maiteurrutia",
+        "twitter": "maite_dev"
+      }
+    ]
+  }
+]
