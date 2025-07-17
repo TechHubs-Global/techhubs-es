@@ -1,136 +1,221 @@
 [
   {
     "id": "1",
-    "name": "Madrid Tech Hub",
-    "slug": "madrid-tech-hub",
-    "shortDescription": "Comunidad tecnológica de Madrid enfocada en startups y emprendimiento",
-    "fullDescription": "Madrid Tech Hub es una comunidad vibrante de desarrolladores, emprendedores y profesionales tech en Madrid. Organizamos eventos, meetups y networking para conectar a la comunidad tecnológica de la capital.",
+    "name": "TechHubs - Madrid",
+    "slug": "techhubs-madrid",
+    "shortDescription": "Comunidad destinada a exhibir y conectar a las comunidades tecnológicas.",
+    "fullDescription": "TechHubs es un proyecto impulsado por la comunidad destinado a exhibir y conectar a las comunidades tecnológicas. Nuestra misión es fomentar la colaboración, el intercambio de conocimientos y el crecimiento dentro del ecosistema tecnológico. Creemos en el poder de las comunidades tecnológicas locales para impulsar la innovación, crear oportunidades y dar forma al futuro de la tecnología.",
     "location": {
       "lat": 40.4168,
       "lng": -3.7038
     },
     "province": "Madrid",
     "category": "Tech Community",
-    "website": "https://madridtechhub.com",
-    "twitter": "madridtechhub",
+    "website": "https://techhubs.es",
+    "twitter": "techhubs",
     "members": [
       {
-        "name": "Ana García",
-        "github": "anagarcia",
-        "twitter": "ana_garcia_dev"
-      },
-      {
-        "name": "Carlos Ruiz",
-        "github": "carlosruiz",
-        "twitter": "carlos_dev"
+        "name": "Nicolas Gonzalez",
+        "github": "nlgonzalez",
+        "twitter": "_nlgonzalez"
       }
     ]
   },
   {
     "id": "2",
-    "name": "Barcelona Developers",
-    "slug": "barcelona-developers",
-    "shortDescription": "Comunidad de desarrolladores de Barcelona",
-    "fullDescription": "Barcelona Developers es una comunidad inclusiva de desarrolladores de software en Barcelona. Nos enfocamos en compartir conocimiento, crear networking y fomentar el crecimiento profesional.",
+    "name": "Madrid PostgreSQL User Group",
+    "slug": "madrid-postgresql-user-group",
+    "shortDescription": "PostgreSQL User Group en Madrid",
+    "fullDescription": "Join us at the Madrid PostgreSQL User Group to engage in discussions and networking around open-source intelligence, PostgreSQL database management, and the intersection of technology and society. Whether you're a database administrator, data analyst, developer, data professional, tech startup enthusiast, or simply curious; this is the place to learn, share ideas, and collaborate with like-minded individuals. Stay updated on the latest trends in technology while connecting with industry experts and fellow enthusiasts. Let's come together to explore the unlimited possibilities of PostgreSQL and its impact on shaping our digital future.",
     "location": {
-      "lat": 41.3851,
-      "lng": 2.1734
+      "lat": 40.4168,
+      "lng": -3.7038
     },
-    "province": "Barcelona",
+    "province": "Madrid",
     "category": "Tech Community",
-    "website": "https://barcelonadev.com",
-    "twitter": "bcndevs",
+    "website": "https://madrid-postgresql-user-group.com",
+    "twitter": "postgresql_madrid",
     "members": [
       {
-        "name": "Maria López",
-        "github": "marialopez",
-        "twitter": "maria_bcn"
-      },
-      {
-        "name": "Jordi Martínez",
-        "github": "jordimartinez",
-        "twitter": "jordi_dev"
+        "name": "Dave Pitts",
+        "github": "davepitts",
+        "twitter": "davepitts"
       }
     ]
   },
   {
     "id": "3",
-    "name": "Valencia Tech Valley",
-    "slug": "valencia-tech-valley",
-    "shortDescription": "Ecosistema tecnológico de Valencia",
-    "fullDescription": "Valencia Tech Valley es una iniciativa para fomentar el ecosistema tecnológico de Valencia. Conectamos startups, desarrolladores y empresas tech de la Comunidad Valenciana.",
+    "name": "Madrid AI Developers Group",
+    "slug": "madrid-ai-developers-group",
+    "shortDescription": "Madrid AI Developers Group",
+    "fullDescription": "Learn by Practice. Join us to learn and practice AI, Machine learning, Deep learning and Data Science technology together with like-minded developers. Our goal is to congregate with AI enthusiasts from all over Madrid to learn and practice AI tech, through tech talks, hands-on workshops, code labs, hackathons, etc.. we regularly invite tech leads from innovated companies, successful startups to share their practice experiences and practices in the world of AI, Cloud, Data, Blockchain.",
     "location": {
-      "lat": 39.4699,
-      "lng": -0.3763
+      "lat": 40.4168,
+      "lng": -3.7038
     },
-    "province": "Valencia",
+    "province": "Madrid",
     "category": "Tech Community",
-    "website": "https://valenciatechvalley.com",
-    "twitter": "vlctechvalley",
+    "website": "https://madrid-ai-developers-group.com",
+    "twitter": "madrid_ai_devs",
     "members": [
       {
-        "name": "Vicente Pérez",
-        "github": "vicenteperez",
-        "twitter": "vicente_vlc"
-      },
-      {
-        "name": "Carmen Sánchez",
-        "github": "carmensanchez",
-        "twitter": "carmen_dev"
+        "name": "Kevin L",
+        "github": "kevinl",
+        "twitter": "kevin_l"
       }
     ]
   },
   {
     "id": "4",
-    "name": "Sevilla Tech Community",
-    "slug": "sevilla-tech-community",
-    "shortDescription": "Comunidad tecnológica de Sevilla",
-    "fullDescription": "Sevilla Tech Community agrupa a profesionales y entusiastas de la tecnología en Sevilla y Andalucía. Organizamos eventos, talleres y meetups para fomentar la innovación tecnológica.",
+    "name": "Product Tank Madrid",
+    "slug": "product-tank-madrid",
+    "shortDescription": "Exchange ideas and experiences about Product Design.",
+    "fullDescription": "ProductTank provides an opportunity for Product Managers in Madrid to exchange ideas and experiences about Product Design, Development and Management, Business Modelling, Metrics, User Experience and all the other things that get us excited. Events include talks from guest speakers on topics around product management, networking opportunities, and a good old-fashioned chin-wag over a beer or two. We're open to companies big and small. We also welcome early-stage technology businesses looking to learn how to get their ideas off the ground.",
     "location": {
-      "lat": 37.3886,
-      "lng": -5.9823
+      "lat": 40.4168,
+      "lng": -3.7038
     },
-    "province": "Sevilla",
+    "province": "Madrid",
     "category": "Tech Community",
-    "website": "https://sevillatech.com",
-    "twitter": "sevillatech",
+    "website": "http://www.mindtheproduct.com/",
+    "twitter": "producttank",
     "members": [
       {
-        "name": "Antonio Jiménez",
-        "github": "antoniojimenez",
-        "twitter": "antonio_sev"
-      },
-      {
-        "name": "Rocío Morales",
-        "github": "rociomorales",
-        "twitter": "rocio_dev"
+        "name": "Mind The Product",
+        "github": "mindtheproduct",
+        "twitter": "mindtheproduct"
       }
     ]
   },
   {
     "id": "5",
-    "name": "Bilbao Innovation Hub",
-    "slug": "bilbao-innovation-hub",
-    "shortDescription": "Hub de innovación y tecnología en Bilbao",
-    "fullDescription": "Bilbao Innovation Hub es un espacio de encuentro para innovadores, desarrolladores y empresarios tecnológicos del País Vasco. Promovemos la colaboración y el intercambio de ideas.",
+    "name": "Madrid Startup Founder 101",
+    "slug": "madrid-startup-founder-101",
+    "shortDescription": "Meet, discuss and collaborate to build great new startups.",
+    "fullDescription": "Startup Founder 101 brings together aspiring and experienced tech entrepreneurs to discuss, meet, and collaborate to build great new startups, and to push the local startup ecosystem forward. This group hosts numerous free events throughout the year where you can learn the best practices of starting a company from people who have been there and done that. You’ll have the opportunity to meet local founders and investors, exchange ideas with experts, get feedback on your idea, participate in startup workshops, and more.",
     "location": {
-      "lat": 43.2627,
-      "lng": -2.9253
+      "lat": 40.4168,
+      "lng": -3.7038
     },
-    "province": "Vizcaya",
+    "province": "Madrid",
     "category": "Innovation Hub",
-    "website": "https://bilbaoinnovation.com",
-    "twitter": "bilbaoinnovation",
+    "website": "https://www.meetup.com/es-es/madrid-startup-founder-101/",
+    "twitter": "madrid_startup_founder",
     "members": [
       {
-        "name": "Aitor Etxebarria",
-        "github": "aitoretxebarria",
-        "twitter": "aitor_bilbao"
-      },
+        "name": "Jonathan Greechan", 
+        "github": "jongrechan",
+        "twitter": "jongrechan"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "MadridJS",
+    "slug": "madridjs",
+    "shortDescription": "JavaScript and front end developers in Madrid",
+    "fullDescription": "Si te gusta la programación, eres un apasionado de JavaScript y de las tecnologías de front end, este es tu grupo. Y si encima vives en Madrid ya no tienes excusa. Nos reunimos una vez al mes para estar en contacto y charlas sobre lo que nos gusta en torno a una charla.",
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "province": "Madrid",
+    "category": "Innovation Hub",
+    "website": "https://www.github.com/madridjs",
+    "twitter": "madridjs",
+    "members": [
       {
-        "name": "Maite Urrutia",
-        "github": "maiteurrutia",
-        "twitter": "maite_dev"
+        "name": "Javier Velez", 
+        "github": "javiervelezreyes",
+        "twitter": "javiervelez"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Software Crafters Madrid",
+    "slug": "madswcraft",
+    "shortDescription": "Software Crafters Madrid",
+    "fullDescription": "Esta es una comunidad para aquellos que se preocupan y están orgullosos de lo que hacen. Para aquellos/as desarrolladores/as , independientemente de su experiencia, que quieren mejorar y dominar su oficio. Esta es una comunidad para quienes creen que estar en la media no es lo suficientemente bueno. El Manifiesto por la Artesanía del Software: Como aspirantes a creadores de software, estamos elevando el nivel del desarrollo de software profesional practicándolo y ayudando a otros a aprender el oficio.",
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "province": "Madrid",
+    "category": "Tech Community",
+    "website": "https://www.meetup.com/es-es/madswcraft/",
+    "twitter": "madswcraft",
+    "members": [
+      {
+        "name": "Helena Abellan", 
+        "github": "helenaabell",
+        "twitter": "helenaabell"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Node.js Madrid",
+    "slug": "node-js-madrid",
+    "shortDescription": "We talk about Node.js",
+    "fullDescription": "In this group we talk about Node.js, the server environment that uses JavaScript. If you have something to tell us, send a proposal (https://github.com/NodeJsMadrid/talks/issues/new)!. To send job offers to the mailing list, use the address node-js-madrid-list@meetup.com. Always write from the address from which you subscribed, indicating [JOB] in the subject. The salary range is mandatory. If you don't receive an answer in a few hours, forward the email as it is to manufosela@gmail.com, fr.ruizf@gmail.com and ac.alexandra25@gmail.com and we will send it for you. Responding in public to mail offers is not permitted.",
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "province": "Madrid",
+    "category": "Tech Community",
+    "website": "https://github.com/NodeJsMadrid/",
+    "twitter": "NodeJsMadrid",
+    "members": [
+      {
+        "name": "Manuel Fosela", 
+        "github": "manufosela",
+        "twitter": "manufosela"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Madrid Amazon Web Services (AWS) Meetup",
+    "slug": "madrid-amazon-web-services-meetup",
+    "shortDescription": "Amazon Web Services (AWS) Meetup",
+    "fullDescription": "Un grupo dedicado a los usuarios, apasionados de las nuevas tecnologías y clientes de Amazon Web Services que deseen compartir experiencias, desarrollos, casos de éxito, anécdotas sobre los servicios en la nube y por que no, una que otra cerveza ;)",
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "province": "Madrid",
+    "category": "Tech Community",
+    "website": "https://www.meetup.com/es-es/madrid-amazon-web-services-meetup/",
+    "twitter": "madrid_aws",
+    "members": [
+      {
+        "name": "Oscar", 
+        "github": "oscar",
+        "twitter": "oscar"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Arquitectura de Software Madrid",
+    "slug": "arquitectura-software-madrid",
+    "shortDescription": "Estamos en contacto con referentes de la industria local.",
+    "fullDescription": "Este grupo es para estar en contacto con referentes de la industria local con amplia experiencia en la construcción, evolución y desarrollo de Arquitectura de Software. Nuestro objetivo es generar un espacio común para compartir experiencias y conocimientos de manera abierta y colaborativa. Si sois arquitecto, queres serlo, o simplemente os gustaría charlar sobre estos temas, entonces no dudes en participar!",
+    "location": {
+      "lat": 40.4168,
+      "lng": -3.7038
+    },
+    "province": "Madrid",
+    "category": "Tech Community",
+    "website": "https://www.meetup.com/es-ES/arquitecturadesoftwareespana/",
+    "twitter": "arquitecturadesoft",
+    "members": [
+      {
+        "name": "Nicolas Gonzalez", 
+        "github": "nlgonzalez",
+        "twitter": "_nlgonzalez"
       }
     ]
   }
