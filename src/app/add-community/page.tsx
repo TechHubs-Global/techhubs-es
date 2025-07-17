@@ -42,14 +42,14 @@ export default function AddCommunityPage() {
         >
           <ol className='space-y-6 mb-8'>
             {[
-              'Fork the TechHubsAr repository on GitHub.',
+              'Fork the TechHubsES repository on GitHub.',
               'Clone your forked repository to your local machine.',
               'Create a new branch for your changes.',
               'Take the template from "community.example.json", duplicate it and add your communtiy information.',
               'Add the new community information to the /data/communities.json JSON file.',
               'Place your community json on `/public/data/communities`',
               'Commit your changes and push to your forked repository.',
-              'Create a Pull Request (PR) from your fork to the main TechHubsAr repository.',
+              'Create a Pull Request (PR) from your fork to the main TechHubsES repository.',
             ].map((step, index) => (
               <motion.li
                 key={index}
@@ -78,7 +78,7 @@ export default function AddCommunityPage() {
               className='group relative overflow-hidden rounded-xl border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-lg w-full sm:w-auto'
             >
               <a
-                href='https://github.com/TechHubsAr/techhubsar'
+                href='https://github.com/TechHubs-Global/techhubs-es'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='flex items-center justify-center gap-3 px-6 py-5'

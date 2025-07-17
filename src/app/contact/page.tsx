@@ -21,20 +21,20 @@ const item = {
 const contactLinks = [
   {
     title: 'Email',
-    description: 'contact@techhubs.ar',
-    href: 'mailto:contact@techhubs.ar',
+    description: 'contact@techhubs.es',
+    href: 'mailto:contact@techhubs.es',
     icon: Mail,
   },
   {
     title: 'Twitter',
-    description: '@techhubsar',
-    href: 'https://twitter.com/techhubsar',
+    description: '@techhubses',
+    href: 'https://twitter.com/techhubses',
     icon: Twitter,
   },
   {
     title: 'GitHub',
-    description: 'TechHubsAr/techhubsar',
-    href: 'https://github.com/TechHubsAr/techhubsar',
+    description: 'TechHubs-Global/techhubs-es',
+    href: 'https://github.com/TechHubs-Global/techhubs-es',
     icon: Github,
   },
 ];

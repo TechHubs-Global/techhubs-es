@@ -30,7 +30,7 @@ export default function AboutPage() {
       >
         <motion.div variants={item} className='text-center space-y-4'>
           <h1 className='text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent'>
-            About TechHubsAr
+            About TechHubs Spain
           </h1>
           <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
             Connecting and empowering tech communities across Spain
@@ -44,7 +44,7 @@ export default function AboutPage() {
           <div className='space-y-8'>
             <div className='space-y-6'>
               <p className='text-lg text-muted-foreground leading-relaxed'>
-                TechHubsAr is a community-driven project aimed at showcasing and
+                TechHubsES is a community-driven project aimed at showcasing and
                 connecting tech communities across Spain. Our mission is to
                 foster collaboration, knowledge sharing, and growth within the
                 Spanish tech ecosystem.
@@ -106,7 +106,7 @@ export default function AboutPage() {
                   className='group hover:border-primary/50 transition-colors'
                 >
                   <a
-                    href='https://github.com/TechHubsAr/techhubsar'
+                    href='https://github.com/TechHubs-Global/techhubs-es'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center gap-2'

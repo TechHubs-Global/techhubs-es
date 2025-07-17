@@ -19,7 +19,6 @@ import { ThemeSwitch } from '@/components/common/theme-switch';
 import { cn } from '@/lib/utils';
 
 const dataButtons = [
-  { label: 'Home', href: '/' },
   { label: 'Communities', href: '/communities' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
@@ -60,11 +59,11 @@ export default function Header() {
                 <SheetContent side='left' className='w-[240px] sm:w-[300px]'>
                   <SheetHeader>
                     <SheetTitle>
-                      <Link
-                        href='/'
-                        className='text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent'
-                      >
-                        TechHubsES
+                      <Link href='/' className='text-xl font-bold text-primary'>
+                        TechHubs
+                        <span className='bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent'>
+                          ES
+                        </span>
                       </Link>
                     </SheetTitle>
                   </SheetHeader>
@@ -96,9 +95,12 @@ export default function Header() {
             <nav className='hidden md:flex items-center gap-8'>
               <Link
                 href='/'
-                className='text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent'
+                className='text-xl font-bold text-primary hover:text-primary/80'
               >
-                TechHubsES
+                TechHubs
+                <span className='bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent'>
+                  ES
+                </span>
               </Link>
               {dataButtons.map((button, index) => (
                 <Link

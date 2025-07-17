@@ -1,90 +1,76 @@
-'use client';
-
 import Link from 'next/link';
-import { motion } from 'motion/react';
 import { Plus } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
 export default function AddCommunityButton() {
   return (
-    <Link href='/add-community'>
+    <Link href='/add-community' className='inline-block'>
       <button
         className={cn(
           'group relative overflow-hidden rounded-xl mt-8',
-          'dark:bg-background bg-white', // Added light mode background
-          'p-px transition-transform',
-          'active:scale-95 hover:scale-[1.02]',
-          'shadow-sm dark:shadow-none', // Added light mode shadow
+          'bg-card border border-border',
+          'transition-all duration-300',
+          'shadow-sm hover:shadow-md',
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+          // Neon effect
+          'hover:shadow-[0_0_20px_-5px_hsl(var(--primary)/0.5)]',
+          'hover:border-primary/50',
+          'dark:hover:shadow-[0_0_25px_-5px_hsl(var(--primary)/0.7)]',
         )}
+        aria-label='Add new community to the platform'
+        type='button'
       >
-        <motion.span
-          animate={{
-            top: ['50%', '0%', '50%', '100%', '50%'],
-            left: ['0%', '50%', '100%', '50%', '0%'],
-          }}
+        {/* Animated background gradient with Spain colors */}
+        <div
           className={cn(
-            '-translate-x-1/2 -translate-y-1/2 absolute z-10 size-8',
-            'transform-gpu blur-sm transition-transform duration-300',
-            'group-hover:scale-[3]',
-            'dark:opacity-100 opacity-80', // Reduced opacity for light mode
+            'absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300',
+            'group-hover:opacity-100',
+            'animate-[pulse_2s_ease-in-out_infinite]',
           )}
-          transition={{
-            duration: 3,
-            ease: 'linear',
-            repeat: Infinity,
+          style={{
+            background: 'linear-gradient(45deg, rgba(220, 38, 38, 0.1), rgba(234, 179, 8, 0.1))',
           }}
-        >
-          <motion.span
-            animate={{
-              rotate: ['0deg', '360deg'],
-            }}
-            className='block size-full transform-gpu rounded-full'
-            style={{
-              background:
-                'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))',
-            }}
-            transition={{
-              duration: 3,
-              ease: 'linear',
-              repeat: Infinity,
-            }}
-          />
-        </motion.span>
+        />
 
+        {/* Main content */}
         <span
           className={cn(
-            'relative z-10 flex items-center gap-2 rounded-xl',
-            'dark:bg-background/95 bg-white/95',
+            'relative z-10 flex items-center gap-2 rounded-lg',
+            'bg-card/95 backdrop-blur-sm',
             'px-6 py-3 text-sm font-medium',
-            'dark:border-none border border-border/20',
+            'border border-border/50',
+            'transition-all duration-300',
+            'group-hover:bg-card group-hover:border-primary/30',
+            'group-hover:shadow-inner',
           )}
         >
-          <motion.span
-            animate={{
-              backgroundImage: [
-                'linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)))',
-                'linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)))',
-              ],
-            }}
+          <span
             className={cn(
-              'flex items-center gap-2 bg-clip-text',
-              'dark:text-primary text-primary/90',
-              'transition-colors duration-500',
-              'group-hover:text-transparent font-mono',
+              'flex items-center gap-2',
+              'text-foreground transition-colors duration-300',
+              'group-hover:text-primary font-mono',
             )}
-            transition={{
-              duration: 2,
-              ease: 'linear',
-              repeat: Infinity,
-            }}
           >
             <Plus
               className={cn('w-4 h-4', 'dark:text-primary text-primary/90')}
             />
             Add new community
-          </motion.span>
+          </span>
         </span>
+
+        {/* Neon border animation with Spain flag colors */}
+        <div
+          className={cn(
+            'absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300',
+            'group-hover:opacity-100',
+            'animate-[shimmer_2s_ease-in-out_infinite]',
+          )}
+          style={{
+            background: 'linear-gradient(90deg, transparent, #dc2626, #eab308, transparent)',
+            animation: 'shimmer 2s ease-in-out infinite',
+          }}
+        />
       </button>
     </Link>
   );

@@ -35,7 +35,10 @@ export default function HomePageClient({ communities }: HomePageClientProps) {
           <Spotlight />
           <div className='relative space-y-4'>
             <h1 className='text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight tech-gradient'>
-              Tech Communities in Spain
+              Tech Communities in{' '}
+              <span className='bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent'>
+                Spain
+              </span>
             </h1>
             <p className='text-lg sm:text-xl text-muted-foreground max-w-prose'>
               Discover and connect with tech enthusiasts across the country

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useRef, useMemo, useState } from 'react';
+import { useCallback, useRef, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from 'motion/react';
 import {
@@ -11,6 +11,7 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps';
 import { geoMercator } from 'd3-geo';
+
 import { useIsMobile } from '@/hooks/use-is-mobile';
 import type { Community } from '@/types/community';
 
@@ -166,7 +167,7 @@ export default function SpainMap({
   return (
     <div
       ref={mapRef}
-      className='relative w-full h-full flex items-center justify-center p-2 bg-white dark:bg-card/30 rounded-xl border dark:border-border/50 shadow-sm dark:shadow-none'
+      className='relative w-full h-full flex items-center justify-center p-2 bg-card border border-border rounded-xl shadow-sm'
       onClick={handleMapClick}
       onTouchStart={handleMapClick}
     >
@@ -189,12 +190,12 @@ export default function SpainMap({
                 <Geography
                   key={geo.rsmKey || `geo-${index}`}
                   geography={geo}
-                  className='fill-muted/60 dark:fill-muted/20 stroke-border dark:stroke-border transition-colors duration-200'
+                  className='fill-muted stroke-border transition-colors duration-200'
                   strokeWidth={0.8}
                   style={{
                     default: { outline: 'none' },
                     hover: {
-                      fill: 'hsl(var(--muted)/0.8)',
+                      fill: 'hsl(var(--muted)/0.9)',
                       transition: 'all 250ms',
                     },
                     pressed: { outline: 'none' },
@@ -224,8 +225,8 @@ export default function SpainMap({
                   >
                     <motion.circle
                       r={isMobile ? 4 : 5}
-                      className='fill-primary dark:fill-primary stroke-white dark:stroke-background/80 cursor-pointer'
-                      strokeWidth={1.5}
+                      className='fill-primary stroke-primary-foreground hover:fill-primary/90 cursor-pointer'
+                      strokeWidth={2}
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{
@@ -257,8 +258,8 @@ export default function SpainMap({
                     >
                       <motion.circle
                         r={isMobile ? 8 : 10}
-                        className='fill-primary dark:fill-primary stroke-white dark:stroke-background/80'
-                        strokeWidth={1.5}
+                        className='fill-primary stroke-primary-foreground hover:fill-primary/90'
+                        strokeWidth={2}
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
@@ -271,7 +272,8 @@ export default function SpainMap({
                       <text
                         textAnchor='middle'
                         y={isMobile ? 4 : 5}
-                        className='font-bold text-white dark:text-white text-xs pointer-events-none'
+                        className='font-bold text-primary-foreground text-xs pointer-events-none'
+                        style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
                       >
                         {cluster.communities.length}
                       </text>
@@ -291,7 +293,7 @@ export default function SpainMap({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className='absolute z-50 bg-popover/95 dark:bg-popover/90 border border-border/60 dark:border-border/50 rounded-lg shadow-md dark:shadow-xl p-3 px-4 max-w-[250px] min-w-[150px] pointer-events-auto'
+            className='absolute z-50 bg-popover border border-border rounded-lg shadow-lg p-3 px-4 max-w-[250px] min-w-[150px] pointer-events-auto'
             style={{
               left: `${tooltipPosition.x}px`,
               top: `${tooltipPosition.y}px`,
@@ -299,18 +301,19 @@ export default function SpainMap({
             }}
           >
             <button
-              className='absolute top-1 right-1 text-muted-foreground hover:text-foreground'
+              className='absolute top-1 right-1 text-muted-foreground hover:text-foreground transition-colors'
               onClick={closeTooltip}
+              aria-label='Close tooltip'
             >
-              <p>x</p>
+              ×
             </button>
             {tooltipContent.type === 'single' ? (
               <div className='flex flex-col gap-2'>
-                <p className='font-medium text-sm dark:text-foreground text-foreground'>
+                <p className='font-medium text-sm text-popover-foreground'>
                   {tooltipContent.community.name}
                 </p>
-                <p className='text-xs flex items-center gap-1 dark:text-muted-foreground text-muted-foreground'>
-                  <span className='w-2 h-2 rounded-full bg-primary dark:bg-primary' />
+                <p className='text-xs flex items-center gap-1 text-muted-foreground'>
+                  <span className='w-2 h-2 rounded-full bg-primary' />
                   {tooltipContent.community.province}
                 </p>
                 <button
@@ -319,7 +322,7 @@ export default function SpainMap({
                       formatCommunityName(tooltipContent.community.name),
                     )
                   }
-                  className='mt-2 px-3 py-1 text-xs bg-primary text-white rounded hover:bg-primary/90 transition-colors'
+                  className='mt-2 px-3 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors'
                 >
                   Seleccionar
                 </button>
@@ -329,15 +332,15 @@ export default function SpainMap({
                 {tooltipContent.communities.map((comm: Community, index) => (
                   <div
                     key={`${comm.slug || comm.name}-${index}`}
-                    className='cursor-pointer hover:underline p-1 rounded hover:bg-muted/10 transition-colors'
+                    className='cursor-pointer hover:underline p-1 rounded hover:bg-accent hover:text-accent-foreground transition-colors'
                     onClick={() =>
                       navigateToCommunity(formatCommunityName(comm.name))
                     }
                   >
-                    <p className='font-medium text-sm dark:text-foreground text-foreground'>
+                    <p className='font-medium text-sm text-popover-foreground'>
                       {comm.name}
                     </p>
-                    <p className='text-xs dark:text-muted-foreground text-muted-foreground'>
+                    <p className='text-xs text-muted-foreground'>
                       {comm.province}
                     </p>
                   </div>

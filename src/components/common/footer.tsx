@@ -53,7 +53,7 @@ export default function Footer() {
           <div className='space-y-3'>
             <h3 className='text-lg font-semibold tracking-tight'>Connect</h3>
             <a
-              href='https://github.com/TechHubsAr/techhubsar'
+              href='https://github.com/TechHubs-Global/techhubs-es'
               target='_blank'
               rel='noopener noreferrer'
               className={cn(
