@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/ui/sonner';
 
 import { cn } from '@/lib/utils';
+import { metadata as metadataConstants } from '@/constants/metadata';
 import './globals.css';
 
 const geistSans = Geist({
@@ -20,8 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'TechHubs Spain',
-  description: 'Discover tech communities across Spain',
+  ...metadataConstants,
 };
 
 export default function RootLayout({
