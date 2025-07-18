@@ -20,7 +20,7 @@ export function CommunityCard({ community, isHovered }: CommunityCardProps) {
       onMouseEnter={() => setLocalHovered(true)}
       onMouseLeave={() => setLocalHovered(false)}
       className={cn(
-        "group w-full h-[280px] p-5 backdrop-blur-sm",
+        "group w-full h-[280px] p-2 sm:p-5 backdrop-blur-sm",
         "dark:bg-background/50 bg-white",
         "rounded-xl flex flex-col gap-4 cursor-pointer",
         "dark:border-border/50 border-border/20",

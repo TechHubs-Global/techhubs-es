@@ -1,4 +1,5 @@
 import { Skeleton } from "@/components/ui/skeleton";
+import AddCommunityButton from "./components/add-community-button";
 
 export default function HomePageLoading() {
   return (
@@ -8,14 +9,23 @@ export default function HomePageLoading() {
           <div className="flex flex-col xl:flex-row gap-8 mb-12">
             {/* Map */}
             <div className="w-full xl:w-2/3 relative">
-              <Skeleton className="aspect-[4/3] md:aspect-[16/9] xl:aspect-auto xl:h-[600px] w-full" />
+              <Skeleton className="bg-gray-200 dark:bg-card aspect-[4/3] md:aspect-[16/9] xl:aspect-auto xl:h-[600px] w-full" />
             </div>
             {/* Title, description and CTA button */}
             <div className="w-full xl:w-1/3 flex flex-col justify-center">
-              <div className="space-y-4">
-                <Skeleton className="h-12 w-3/4 mb-2" />
-                <Skeleton className="h-6 w-2/3 mb-2" />
-                <Skeleton className="h-10 w-1/2 mt-4" />
+              <div className="relative space-y-4">
+                <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tight tech-gradient">
+                  Tech Communities in{" "}
+                  <span className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent">
+                    Spain
+                  </span>
+                </h1>
+                <h2 className="text-lg sm:text-xl text-muted-foreground max-w-prose">
+                  Discover and connect with tech enthusiasts across the country
+                </h2>
+                <div className="pt-2">
+                  <AddCommunityButton />
+                </div>
               </div>
             </div>
           </div>

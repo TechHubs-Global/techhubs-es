@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 
-import AddCommunityButton from "@/app/(index)/components/add-community-button";
 import SpainMap from "@/components/spain-map";
 import { Spotlight } from "@/components/ui/spotlight";
+import AddCommunityButton from "./components/add-community-button";
+import CommunityList from "./components/community-list";
 
 import { cn } from "@/lib/utils";
 import type { Community } from "@/types/community";
-import CommunityList from "@/app/(index)/components/community-list";
 
 interface HomePageClientProps {
   communities: Community[];
