@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 
 const dataButtons = [
   { label: "Communities", href: "/communities" },
+  { label: "Events", href: "/events" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
