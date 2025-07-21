@@ -2,6 +2,7 @@
 
 import { memo } from "react";
 import { motion, type Variants } from "motion/react";
+import { ChevronRight, MapPin, Users } from "lucide-react";
 
 interface LumaEvent {
   id: string;
@@ -69,17 +70,7 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
 
         {/* Attendees Count */}
         <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-background/20 backdrop-blur-sm rounded-full">
-          <svg
-            className="w-4 h-4 text-white"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <Users className="w-4 h-4" />
           <span className="text-white text-xs font-medium">
             {event.attendees}
           </span>
@@ -113,17 +104,7 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
         <div className="mt-auto space-y-4">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
-              <svg
-                className="w-3 h-3 text-muted-foreground"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <MapPin className="w-4 h-4" />
             </div>
             <span className="text-muted-foreground text-sm">
               {event.location}
@@ -133,19 +114,7 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
           <div className="pt-4 border-t border-border">
             <div className="flex items-center justify-between">
               <span className="text-muted-foreground text-sm">See on Luma</span>
-              <svg
-                className="w-4 h-4 text-foreground transition-transform duration-300 group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <ChevronRight className="w-4 h-4" />
             </div>
           </div>
         </div>
