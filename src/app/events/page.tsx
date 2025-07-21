@@ -1,4 +1,4 @@
-import { LumaEvents } from "./components";
+import { LumaEvents } from "./_components";
 
 // Mock data
 const events = [
