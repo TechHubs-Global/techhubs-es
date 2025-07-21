@@ -86,7 +86,7 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
         </div>
       </div>
 
-      {/* Event Content - Flex container */}
+      {/* Event Content */}
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-3">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -109,9 +109,8 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
           </span>
         </div>
 
-        {/* Footer - Always at bottom */}
+        {/* Footer */}
         <div className="mt-auto space-y-4">
-          {/* Location */}
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
               <svg
@@ -131,7 +130,6 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
             </span>
           </div>
 
-          {/* CTA Button */}
           <div className="pt-4 border-t border-border">
             <div className="flex items-center justify-between">
               <span className="text-muted-foreground text-sm">See on Luma</span>

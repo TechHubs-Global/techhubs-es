@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { memo } from "react";
 import { motion, type Variants } from "motion/react";
 
@@ -70,13 +71,12 @@ const HeroSection = memo(
               </p>
             </motion.div>
 
-            {/* App mockup/Image Content */}
             <motion.div
               className={`relative mt-10 md:mt-0 mx-auto ${imageOrderClass} w-full max-w-[300px] md:max-w-[471px]`}
               variants={itemVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
-              {/* Decorative Background Element */}
+              {/* Background secondary image */}
               <motion.div
                 className={`absolute w-[300px] h-[317px] md:w-[472px] md:h-[500px] bg-muted/30 rounded-[32px] z-0`}
                 style={{
@@ -94,15 +94,15 @@ const HeroSection = memo(
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <div
-                  className="relative w-full h-full bg-cover bg-center rounded-[32px]"
-                  style={{
-                    backgroundImage: `url(${secondaryImageSrc})`,
-                  }}
+                <Image
+                  src={secondaryImageSrc}
+                  alt="Luma events"
+                  fill
+                  className="w-full h-full object-cover rounded-[32px]"
                 />
               </motion.div>
 
-              {/* Main Mockup Card */}
+              {/* Main image */}
               <motion.div
                 className="relative w-full h-[405px] md:h-[637px] bg-card/10 rounded-[32px] backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-10 overflow-hidden"
                 initial={{ y: reverseLayout ? 0 : 0 }}
@@ -117,12 +117,11 @@ const HeroSection = memo(
                       backgroundSize: "100% 100%",
                     }}
                   >
-                    {/* Primary Image */}
-                    <div
-                      className="w-full h-full bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${primaryImageSrc})`,
-                      }}
+                    <Image
+                      src={primaryImageSrc}
+                      alt="Luma events"
+                      fill
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
@@ -130,15 +129,6 @@ const HeroSection = memo(
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Decorative bottom gradient */}
-        <div
-          className="absolute w-full h-px bottom-0 left-0 z-0"
-          style={{
-            background:
-              "radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0) 100%)",
-          }}
-        />
       </section>
     );
   },
