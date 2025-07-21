@@ -1,5 +1,5 @@
 import { Skeleton } from "@/components/ui/skeleton";
-import AddCommunityButton from "./components/add-community-button";
+import AddCommunityButton from "./_components/add-community-button";
 
 export default function HomePageLoading() {
   return (

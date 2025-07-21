@@ -4,8 +4,8 @@ import { useState } from "react";
 
 import SpainMap from "@/components/spain-map";
 import { Spotlight } from "@/components/ui/spotlight";
-import AddCommunityButton from "./components/add-community-button";
-import CommunityList from "./components/community-list";
+import AddCommunityButton from "./_components/add-community-button";
+import CommunityList from "./_components/community-list";
 
 import { cn } from "@/lib/utils";
 import type { Community } from "@/types/community";
