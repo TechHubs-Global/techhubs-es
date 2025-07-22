@@ -2,7 +2,8 @@ import {
   fetchCommunities,
   fetchCommunityBySlug,
 } from "@/lib/fetch-communities";
-import CommunityContent from "./community-content";
+import CommunityContent from "./_components/content";
+import { notFound } from "next/navigation";
 
 export const generateStaticParams = async () => {
   const communities = fetchCommunities();
@@ -19,13 +20,7 @@ export default async function CommunityPage({
   const { slug } = await params;
   const community = fetchCommunityBySlug(slug);
   if (!community) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-2xl font-bold text-red-500">
-          Community not found
-        </div>
-      </div>
-    );
+    notFound();
   }
 
   return (
