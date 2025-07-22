@@ -1,18 +1,16 @@
 import NotFoundContent from "@/components/common/not-found-content";
 
-export default function CommunityNotFound() {
+export default function GlobalNotFound() {
   return (
     <div className="relative min-h-[60vh] w-full overflow-hidden bg-background">
       <NotFoundContent
-        title="Community"
+        title="404"
         subtitle="Not Found"
-        description="The community you are looking for doesn&apos;t exist or has been deleted."
-        showBackButton={true}
-        backButtonText="Back to Communities"
-        backButtonHref="/communities"
+        description="The page you are looking for doesn&apos;t exist."
+        showBackButton={false}
         showHomeButton={true}
         className="relative min-h-[60vh] w-full overflow-hidden bg-background"
       />
     </div>
   );
-}
+} 
