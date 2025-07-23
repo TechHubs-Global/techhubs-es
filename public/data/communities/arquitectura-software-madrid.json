@@ -1,0 +1,22 @@
+{
+  "id": "10",
+  "name": "Arquitectura de Software Madrid",
+  "slug": "arquitectura-software-madrid",
+  "shortDescription": "Estamos en contacto con referentes de la industria local.",
+  "fullDescription": "Este grupo es para estar en contacto con referentes de la industria local con amplia experiencia en la construcción, evolución y desarrollo de Arquitectura de Software. Nuestro objetivo es generar un espacio común para compartir experiencias y conocimientos de manera abierta y colaborativa. Si sois arquitecto, queres serlo, o simplemente os gustaría charlar sobre estos temas, entonces no dudes en participar!",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://www.meetup.com/es-ES/arquitecturadesoftwareespana/",
+  "twitter": "arquitecturadesoft",
+  "members": [
+    {
+      "name": "Nicolas Gonzalez",
+      "github": "nlgonzalez",
+      "twitter": "_nlgonzalez"
+    }
+  ]
+}

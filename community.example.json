@@ -1,0 +1,25 @@
+{
+  "id": "x",
+  "name": "Community Name",
+  "slug": "community-name",
+  "shortDescription": "Your community short description. This will be displayed in the community list.",
+  "fullDescription": "Your community full description goes here. It can include details about the community's mission, activities, and how to get involved. This will be displayed at the community's page.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "",
+  "twitter": "community_twitter_handle",
+  "whatsapp": "",
+  "telegram": "",
+  "discord": "",
+  "members": [
+    {
+      "name": "First Member Name",
+      "github": "",
+      "twitter": ""
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "2",
+  "name": "Madrid PostgreSQL User Group",
+  "slug": "madrid-postgresql-user-group",
+  "shortDescription": "PostgreSQL User Group en Madrid",
+  "fullDescription": "Join us at the Madrid PostgreSQL User Group to engage in discussions and networking around open-source intelligence, PostgreSQL database management, and the intersection of technology and society. Whether you're a database administrator, data analyst, developer, data professional, tech startup enthusiast, or simply curious; this is the place to learn, share ideas, and collaborate with like-minded individuals. Stay updated on the latest trends in technology while connecting with industry experts and fellow enthusiasts. Let's come together to explore the unlimited possibilities of PostgreSQL and its impact on shaping our digital future.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://www.meetup.com/es-ES/madrid-postgresql-user-group",
+  "twitter": "postgresql_madrid",
+  "members": [
+    {
+      "name": "Dave Pitts",
+      "github": "davepitts",
+      "twitter": "davepitts"
+    }
+  ]
+}
