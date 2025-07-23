@@ -40,8 +40,8 @@ interface GlobeProps {
 }
 
 const Globe = memo(({ className, config }: GlobeProps) => {
-  let phi = 0;
-  let width = 0;
+  const phiRef = useRef(0);
+  const widthRef = useRef(0);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
@@ -74,17 +74,17 @@ const Globe = memo(({ className, config }: GlobeProps) => {
 
   const onRender = useCallback(
     (state: Record<string, number>) => {
-      if (!pointerInteracting.current) phi += 0.005;
-      state.phi = phi + r;
-      state.width = width * 2;
-      state.height = width * 2;
+      if (!pointerInteracting.current) phiRef.current += 0.005;
+      state.phi = phiRef.current + r;
+      state.width = widthRef.current * 2;
+      state.height = widthRef.current * 2;
     },
     [r],
   );
 
   const onResize = useCallback(() => {
     if (canvasRef.current) {
-      width = canvasRef.current.offsetWidth;
+      widthRef.current = canvasRef.current.offsetWidth;
     }
   }, []);
 
@@ -135,8 +135,8 @@ const Globe = memo(({ className, config }: GlobeProps) => {
     // Create globe with memoized config
     globeRef.current = createGlobe(canvasRef.current, {
       ...finalConfig,
-      width: width * 2,
-      height: width * 2,
+      width: widthRef.current * 2,
+      height: widthRef.current * 2,
       onRender,
     });
 
@@ -156,7 +156,7 @@ const Globe = memo(({ className, config }: GlobeProps) => {
         globeRef.current = null;
       }
     };
-  }, [finalConfig, onRender, onResize, width]);
+  }, [finalConfig, onRender, onResize]);
 
   return (
     <div
