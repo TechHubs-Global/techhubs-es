@@ -1,0 +1,22 @@
+{
+  "id": "3",
+  "name": "Madrid AI Developers Group",
+  "slug": "madrid-ai-developers-group",
+  "shortDescription": "Madrid AI Developers Group",
+  "fullDescription": "Learn by Practice. Join us to learn and practice AI, Machine learning, Deep learning and Data Science technology together with like-minded developers. Our goal is to congregate with AI enthusiasts from all over Madrid to learn and practice AI tech, through tech talks, hands-on workshops, code labs, hackathons, etc.. we regularly invite tech leads from innovated companies, successful startups to share their practice experiences and practices in the world of AI, Cloud, Data, Blockchain.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://www.meetup.com/es-ES/madrid-ai-developers-group",
+  "twitter": "madrid_ai_devs",
+  "members": [
+    {
+      "name": "Kevin L",
+      "github": "kevinl",
+      "twitter": "kevin_l"
+    }
+  ]
+}

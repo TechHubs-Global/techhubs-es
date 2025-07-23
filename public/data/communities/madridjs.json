@@ -1,0 +1,22 @@
+{
+  "id": "6",
+  "name": "MadridJS",
+  "slug": "madridjs",
+  "shortDescription": "JavaScript and front end developers in Madrid",
+  "fullDescription": "Si te gusta la programación, eres un apasionado de JavaScript y de las tecnologías de front end, este es tu grupo. Y si encima vives en Madrid ya no tienes excusa. Nos reunimos una vez al mes para estar en contacto y charlas sobre lo que nos gusta en torno a una charla.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Innovation Hub",
+  "website": "https://www.github.com/madridjs",
+  "twitter": "madridjs",
+  "members": [
+    {
+      "name": "Javier Velez",
+      "github": "javiervelezreyes",
+      "twitter": "javiervelez"
+    }
+  ]
+}

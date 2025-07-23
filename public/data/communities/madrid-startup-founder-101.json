@@ -1,0 +1,22 @@
+{
+  "id": "5",
+  "name": "Madrid Startup Founder 101",
+  "slug": "madrid-startup-founder-101",
+  "shortDescription": "Meet, discuss and collaborate to build great new startups.",
+  "fullDescription": "Startup Founder 101 brings together aspiring and experienced tech entrepreneurs to discuss, meet, and collaborate to build great new startups, and to push the local startup ecosystem forward. This group hosts numerous free events throughout the year where you can learn the best practices of starting a company from people who have been there and done that. You’ll have the opportunity to meet local founders and investors, exchange ideas with experts, get feedback on your idea, participate in startup workshops, and more.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Innovation Hub",
+  "website": "https://www.meetup.com/es-es/madrid-startup-founder-101/",
+  "twitter": "madrid_startup_founder",
+  "members": [
+    {
+      "name": "Jonathan Greechan",
+      "github": "jongrechan",
+      "twitter": "jongrechan"
+    }
+  ]
+}

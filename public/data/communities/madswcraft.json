@@ -1,0 +1,22 @@
+{
+  "id": "7",
+  "name": "Software Crafters Madrid",
+  "slug": "madswcraft",
+  "shortDescription": "Software Crafters Madrid",
+  "fullDescription": "Esta es una comunidad para aquellos que se preocupan y están orgullosos de lo que hacen. Para aquellos/as desarrolladores/as , independientemente de su experiencia, que quieren mejorar y dominar su oficio. Esta es una comunidad para quienes creen que estar en la media no es lo suficientemente bueno. El Manifiesto por la Artesanía del Software: Como aspirantes a creadores de software, estamos elevando el nivel del desarrollo de software profesional practicándolo y ayudando a otros a aprender el oficio.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://www.meetup.com/es-es/madswcraft/",
+  "twitter": "madswcraft",
+  "members": [
+    {
+      "name": "Helena Abellan",
+      "github": "helenaabell",
+      "twitter": "helenaabell"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "8",
+  "name": "Node.js Madrid",
+  "slug": "node-js-madrid",
+  "shortDescription": "We talk about Node.js",
+  "fullDescription": "In this group we talk about Node.js, the server environment that uses JavaScript. If you have something to tell us, send a proposal (https://github.com/NodeJsMadrid/talks/issues/new)!. To send job offers to the mailing list, use the address node-js-madrid-list@meetup.com. Always write from the address from which you subscribed, indicating [JOB] in the subject. The salary range is mandatory. If you don't receive an answer in a few hours, forward the email as it is to manufosela@gmail.com, fr.ruizf@gmail.com and ac.alexandra25@gmail.com and we will send it for you. Responding in public to mail offers is not permitted.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://github.com/NodeJsMadrid/",
+  "twitter": "NodeJsMadrid",
+  "members": [
+    {
+      "name": "Manuel Fosela",
+      "github": "manufosela",
+      "twitter": "manufosela"
+    }
+  ]
+}

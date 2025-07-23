@@ -1,0 +1,22 @@
+{
+  "id": "9",
+  "name": "Madrid Amazon Web Services (AWS) Meetup",
+  "slug": "madrid-amazon-web-services-meetup",
+  "shortDescription": "Amazon Web Services (AWS) Meetup",
+  "fullDescription": "Un grupo dedicado a los usuarios, apasionados de las nuevas tecnologías y clientes de Amazon Web Services que deseen compartir experiencias, desarrollos, casos de éxito, anécdotas sobre los servicios en la nube y por que no, una que otra cerveza ;)",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://www.meetup.com/es-es/madrid-amazon-web-services-meetup/",
+  "twitter": "madrid_aws",
+  "members": [
+    {
+      "name": "Oscar",
+      "github": "oscar",
+      "twitter": "oscar"
+    }
+  ]
+}

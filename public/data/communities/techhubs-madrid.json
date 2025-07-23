@@ -1,0 +1,22 @@
+{
+  "id": "1",
+  "name": "TechHubs - Madrid",
+  "slug": "techhubs-madrid",
+  "shortDescription": "Comunidad destinada a exhibir y conectar a las comunidades tecnológicas.",
+  "fullDescription": "TechHubs es un proyecto impulsado por la comunidad destinado a exhibir y conectar a las comunidades tecnológicas. Nuestra misión es fomentar la colaboración, el intercambio de conocimientos y el crecimiento dentro del ecosistema tecnológico. Creemos en el poder de las comunidades tecnológicas locales para impulsar la innovación, crear oportunidades y dar forma al futuro de la tecnología.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "https://techhubs.es",
+  "twitter": "techhubs",
+  "members": [
+    {
+      "name": "Nicolas Gonzalez",
+      "github": "nlgonzalez",
+      "twitter": "_nlgonzalez"
+    }
+  ]
+}

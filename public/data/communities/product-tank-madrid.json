@@ -1,0 +1,22 @@
+{
+  "id": "4",
+  "name": "Product Tank Madrid",
+  "slug": "product-tank-madrid",
+  "shortDescription": "Exchange ideas and experiences about Product Design.",
+  "fullDescription": "ProductTank provides an opportunity for Product Managers in Madrid to exchange ideas and experiences about Product Design, Development and Management, Business Modelling, Metrics, User Experience and all the other things that get us excited. Events include talks from guest speakers on topics around product management, networking opportunities, and a good old-fashioned chin-wag over a beer or two. We're open to companies big and small. We also welcome early-stage technology businesses looking to learn how to get their ideas off the ground.",
+  "location": {
+    "lat": 40.4168,
+    "lng": -3.7038
+  },
+  "province": "Madrid",
+  "category": "Tech Community",
+  "website": "http://www.mindtheproduct.com/",
+  "twitter": "producttank",
+  "members": [
+    {
+      "name": "Mind The Product",
+      "github": "mindtheproduct",
+      "twitter": "mindtheproduct"
+    }
+  ]
+}
