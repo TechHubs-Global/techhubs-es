@@ -1,0 +1,113 @@
+{
+  "Navigation": {
+    "communities": "Comunidades",
+    "events": "Eventos", 
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "menu": "Menú"
+  },
+  "HomePage": {
+    "title": "Comunidades Tech en",
+    "country": "España",
+    "subtitle": "Descubre y conecta con entusiastas de la tecnología en todo el país",
+    "addCommunity": "Añadir Comunidad"
+  },
+  "About": {
+    "title": "Acerca de TechHubs España",
+    "subtitle": "Conectando y potenciando las comunidades tecnológicas de España",
+    "description1": "TechHubsES es un proyecto impulsado por la comunidad que tiene como objetivo mostrar y conectar las comunidades tecnológicas de España. Nuestra misión es fomentar la colaboración, el intercambio de conocimientos y el crecimiento dentro del ecosistema tecnológico español.",
+    "description2": "Creemos en el poder de las comunidades tecnológicas locales para impulsar la innovación, crear oportunidades y dar forma al futuro de la tecnología en España.",
+    "mission": "Nuestra Misión",
+    "missionText": "Construir un ecosistema tecnológico más conectado y colaborativo en España",
+    "vision": "Nuestra Visión", 
+    "visionText": "Ser la plataforma de referencia para descubrir y participar en comunidades tecnológicas españolas",
+    "joinUs": "Únete a Nosotros",
+    "joinUsText": "¿Tienes una comunidad tecnológica? ¡Nos encantaría incluirte en nuestro directorio!",
+    "viewOnGitHub": "Ver en GitHub"
+  },
+  "AddCommunity": {
+    "title": "Añade Tu Comunidad",
+    "subtitle": "Sigue estos pasos para añadir tu comunidad tecnológica a TechHubs España",
+    "steps": {
+      "fork": "Haz fork del repositorio TechHubsES en GitHub.",
+      "clone": "Clona tu repositorio fork a tu máquina local.",
+      "branch": "Crea una nueva rama para tus cambios.",
+      "template": "Toma la plantilla de \"community.example.json\", duplícala y añade la información de tu comunidad.",
+      "addJson": "Añade la nueva información de la comunidad al archivo JSON /data/communities.json.",
+      "place": "Coloca el JSON de tu comunidad en `/public/data/communities`",
+      "commit": "Haz commit de tus cambios y súbelos a tu repositorio fork.",
+      "pr": "Crea un Pull Request (PR) desde tu fork al repositorio principal de TechHubsES."
+    },
+    "instructions": "Para instrucciones más detalladas y para acceder al repositorio, por favor visita nuestra página de GitHub:",
+    "viewOnGitHub": "Ver en GitHub"
+  },
+  "Communities": {
+    "title": "Comunidades Tech",
+    "subtitle": "Descubre y conecta con comunidades tecnológicas en España",
+    "viewDetails": "Ver detalles",
+    "filter": "Todo",
+    "filterByProvince": "Filtrar por provincia",
+    "allCategories": "Todo",
+    "allProvinces": "Todo"
+  },
+  "Events": {
+    "title": "Conecta con la",
+    "country": "comunidad Española",
+    "subtitle": "Descubre eventos, meetups y conferencias de tecnología en España. Conecta con profesionales, aprende nuevas tecnologías y conviértete en parte de la comunidad tecnológica más activa del país.",
+    "next": "Próximos Eventos Tech",
+    "nextDescription": "Descubre y participa en los eventos tecnológicos más importantes de España",
+    "viewEvent": "Ver en Luma",
+    "by": "por",
+    "attendees": "asistentes",
+    "location": "Ubicación",
+    "date": "Fecha",
+    "tags": "Etiquetas"
+  },
+  "Contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes alguna pregunta o sugerencia? Nos encantaría escucharte",
+    "email": "Email",
+    "github": "GitHub",
+    "twitter": "X (Twitter)"
+  },
+  "Footer": {
+    "about": "Acerca de TechHubs España",
+    "aboutDescription": "TechHubs España es un proyecto impulsado por la comunidad que muestra las comunidades tecnológicas de España.",
+    "importantLinks": "Enlaces Importantes",
+    "addNewCommunity": "Añadir Nueva Comunidad",
+    "aboutUs": "Nosotros",
+    "contact": "Contacto",
+    "connect": "Conectar",
+    "githubRepository": "Repositorio GitHub",
+    "copyright": "© {year} TechHubs España. Todos los derechos reservados."
+  },
+  "Common": {
+    "backToHome": "Volver a la página principal",
+    "previous": "Anterior",
+    "previousLabel": "Ir a la página anterior",
+    "next": "Siguiente",
+    "nextLabel": "Ir a la página siguiente"
+  },
+  "Community": {
+    "members": "miembros",
+    "website": "Sitio web",
+    "visitWebsite": "Visitar sitio web",
+    "followOnTwitter": "Seguir en Twitter",
+    "joinWhatsApp": "Unirse a WhatsApp",
+    "joinTelegram": "Unirse a Telegram",
+    "joinDiscord": "Unirse a Discord",
+    "connectWith": "Conectar con {name}",
+    "location": "Ubicación",
+    "category": "Categoría",
+    "description": "Descripción",
+    "notFoundTitle": "Comunidad",
+    "notFoundSubtitle": "No encontrada",
+    "notFoundDescription": "La comunidad que estás buscando no existe o ha sido eliminada.",
+    "notFoundBackButton": "Volver a Comunidades"
+  },
+  "NotFound": {
+    "title": "404",
+    "subtitle": "Página no encontrada",
+    "description": "La página que estás buscando no existe."
+  }
+}

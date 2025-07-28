@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -15,27 +15,29 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeSwitch } from "@/components/common/theme-switch";
+import { Link } from "@/i18n/navigation";
 
 import { cn } from "@/lib/utils";
 
-const dataButtons = [
-  { label: "Communities", href: "/communities" },
-  { label: "Events", href: "/events" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
-
 export default function Header() {
+  const t = useTranslations("Navigation");
   const pathname = usePathname();
   const [elementFocused, setElementFocused] = useState<number>(-1);
   const [isOpen, setIsOpen] = useState(false);
+
+  const dataButtons = useMemo(() => [
+    { label: t("communities"), href: "/communities" },
+    { label: t("events"), href: "/events" },
+    { label: t("about"), href: "/about" },
+    { label: t("contact"), href: "/contact" },
+  ], [t]);
 
   useEffect(() => {
     const activeIndex = dataButtons.findIndex(
       (button) => button.href === pathname
     );
     setElementFocused(activeIndex);
-  }, [pathname]);
+  }, [pathname, dataButtons]);
 
   return (
     <header
@@ -53,7 +55,7 @@ export default function Header() {
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" aria-label="Menu">
+                  <Button variant="ghost" size="icon" aria-label={t("menu") || "Menu"}>
                     <Menu className="h-5 w-5" />
                   </Button>
                 </SheetTrigger>
@@ -131,7 +133,9 @@ export default function Header() {
           </div>
 
           {/* Right side with theme switch */}
+          <div className="flex items-center gap-4">
           <ThemeSwitch />
+          </div>
         </div>
       </div>
     </header>

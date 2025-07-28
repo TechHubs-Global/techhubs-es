@@ -1,9 +1,14 @@
-import Link from 'next/link';
+"use client";
+
 import { Github } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 import { cn } from '@/lib/utils';
 
 export default function Footer() {
+  const t = useTranslations('Footer');
+
   return (
     <footer
       className={cn(
@@ -16,23 +21,22 @@ export default function Footer() {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12'>
           <div className='space-y-3'>
             <h3 className='text-lg font-semibold tracking-tight'>
-              About TechHubs Spain
+              {t('about')}
             </h3>
             <p className='text-sm leading-relaxed text-muted-foreground'>
-              TechHubs Spain is a community-driven project showcasing tech
-              communities across Spain.
+              {t('aboutDescription')}
             </p>
           </div>
 
           <div className='space-y-3'>
             <h3 className='text-lg font-semibold tracking-tight'>
-              Important Links
+              {t('importantLinks')}
             </h3>
             <ul className='space-y-2'>
               {[
-                { href: '/add-community', label: 'Add New Community' },
-                { href: '/about', label: 'About Us' },
-                { href: '/contact', label: 'Contact' },
+                { href: '/add-community', label: t('addNewCommunity') },
+                { href: '/about', label: t('aboutUs') },
+                { href: '/contact', label: t('contact') },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
@@ -51,7 +55,7 @@ export default function Footer() {
           </div>
 
           <div className='space-y-3'>
-            <h3 className='text-lg font-semibold tracking-tight'>Connect</h3>
+            <h3 className='text-lg font-semibold tracking-tight'>{t('connect')}</h3>
             <a
               href='https://github.com/TechHubs-Global/techhubs-es'
               target='_blank'
@@ -63,15 +67,14 @@ export default function Footer() {
               )}
             >
               <Github className='h-4 w-4 transition-transform group-hover:scale-110' />
-              GitHub Repository
+              {t('githubRepository')}
             </a>
           </div>
         </div>
 
         <div className='mt-8 pt-6 border-t border-border/50'>
           <p className='text-center text-sm text-muted-foreground'>
-            &copy; {new Date().getFullYear()} TechHubs Spain. All rights
-            reserved.
+            {t('copyright', { year: new Date().getFullYear() })}
           </p>
         </div>
       </div>
