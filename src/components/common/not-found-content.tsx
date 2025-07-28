@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Suspense, memo, useMemo } from "react";
 import { ArrowLeft, Home } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 import { DEFAULT_GLOBE_CONFIG } from "@/components/ui/globe";
 
@@ -33,64 +34,64 @@ const ActionLinks = memo(({
   backButtonText = "Go Back", 
   backButtonHref = "/",
   showHomeButton = true 
-}: Pick<NotFoundContentProps, 'showBackButton' | 'backButtonText' | 'backButtonHref' | 'showHomeButton'>) => (
-  <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
-    {showBackButton && (
-      <Link
-        href={backButtonHref}
-        className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg hover:shadow-xl"
-        aria-label={`${backButtonText}`}
-        prefetch={true}
-      >
-        <ArrowLeft
-          className="h-4 w-4 transition-transform group-hover:-translate-x-1"
-          aria-hidden="true"
-        />
-        {backButtonText}
-      </Link>
-    )}
-    
-    {showHomeButton && (
-      <Link
-        href="/"
-        className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border/50 bg-background/80 backdrop-blur-md text-foreground font-medium hover:bg-background/90 hover:border-border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg"
-        aria-label="Go to homepage"
-        prefetch={true}
-      >
-        <Home className="h-4 w-4" aria-hidden="true" />
-        Go Home
-      </Link>
-    )}
-  </div>
-));
+}: Pick<NotFoundContentProps, 'showBackButton' | 'backButtonText' | 'backButtonHref' | 'showHomeButton'>) => {
+  const t = useTranslations("Common");
+
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
+      {showBackButton && (
+        <Link
+          href={backButtonHref}
+          className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          <ArrowLeft
+            className="h-4 w-4 transition-transform group-hover:-translate-x-1"
+            aria-hidden="true"
+          />
+          {backButtonText}
+        </Link>
+      )}
+      
+      {showHomeButton && (
+        <Link
+          href="/"
+          className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border/50 bg-background/80 backdrop-blur-md text-foreground font-medium hover:bg-background/90 hover:border-border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg"
+        >
+          <Home className="h-4 w-4" aria-hidden="true" />
+          {t("backToHome")}
+        </Link>
+      )}
+    </div>
+  );
+});
 
 ActionLinks.displayName = "ActionLinks";
 
-const HelpText = memo(() => (
-  <div className="pt-8">
-    <p className="text-sm text-muted-foreground drop-shadow-sm">
-      Looking for something specific?{" "}
-      <Link
-        href="/communities"
-        className="text-primary hover:text-primary/80 underline decoration-primary/30 hover:decoration-primary/50 transition-colors"
-        aria-label="Browse all communities"
-        prefetch={true}
-      >
-        Browse communities
-      </Link>{" "}
-      or{" "}
-      <Link
-        href="/contact"
-        className="text-primary hover:text-primary/80 underline decoration-primary/30 hover:decoration-primary/50 transition-colors"
-        aria-label="Contact us for help"
-        prefetch={true}
-      >
-        contact us for help
-      </Link>
-      .
-    </p>
-  </div>
-));
+const HelpText = memo(() => {
+  const tNav = useTranslations("Navigation");
+
+  return (
+    <div className="pt-8">
+      <p className="text-sm text-muted-foreground drop-shadow-sm">
+        Looking for something specific?{" "}
+        <Link
+          href="/communities"
+          className="text-primary hover:text-primary/80 underline decoration-primary/30 hover:decoration-primary/50 transition-colors"
+        >
+          {tNav("communities")}
+        </Link>{" "}
+        or{" "}
+        <Link
+          href="/contact"
+          className="text-primary hover:text-primary/80 underline decoration-primary/30 hover:decoration-primary/50 transition-colors"
+        >
+          {tNav("contact")}
+        </Link>
+        .
+      </p>
+    </div>
+  );
+});
 
 HelpText.displayName = "HelpText";
 
@@ -117,14 +118,14 @@ const BackgroundGlobe = memo(() => {
 BackgroundGlobe.displayName = "BackgroundGlobe";
 
 const NotFoundContent = memo(({
-  title = "Page",
-  subtitle = "Not Found",
-  description = "The page you are looking for does not exist or has been moved.",
-  showBackButton = true,
-  backButtonText = "Go Back",
-  backButtonHref = "/",
-  showHomeButton = true,
-  className = "relative min-h-[60vh] w-full overflow-hidden bg-background",
+  title,
+  subtitle,
+  description,
+  showBackButton,
+  backButtonText,
+  backButtonHref,
+  showHomeButton,
+  className,
 }: NotFoundContentProps) => {
   return (
     <div className={className}>
@@ -141,10 +142,7 @@ const NotFoundContent = memo(({
           aria-labelledby="not-found-title"
         >
           <header className="space-y-6">
-            <h1
-              id="not-found-title"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-sm"
-            >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-sm">
               <span className="text-foreground">{title}</span>
               <span className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent">
                 {" "}

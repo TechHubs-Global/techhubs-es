@@ -1,0 +1,113 @@
+{
+  "Navigation": {
+    "communities": "Communities",
+    "events": "Events",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu"
+  },
+  "HomePage": {
+    "title": "Tech Communities in",
+    "country": "Spain",
+    "subtitle": "Discover and connect with tech enthusiasts across the country",
+    "addCommunity": "Add Community"
+  },
+  "About": {
+    "title": "About TechHubs Spain",
+    "subtitle": "Connecting and empowering tech communities across Spain",
+    "description1": "TechHubsES is a community-driven project aimed at showcasing and connecting tech communities across Spain. Our mission is to foster collaboration, knowledge sharing, and growth within the Spanish tech ecosystem.",
+    "description2": "We believe in the power of local tech communities to drive innovation, create opportunities, and shape the future of technology in Spain.",
+    "mission": "Our Mission",
+    "missionText": "To build a more connected and collaborative tech ecosystem in Spain",
+    "vision": "Our Vision",
+    "visionText": "To be the go-to platform for discovering and engaging with Spanish tech communities",
+    "joinUs": "Join Us",
+    "joinUsText": "Have a tech community? We'd love to include you in our directory!",
+    "viewOnGitHub": "View on GitHub"
+  },
+  "AddCommunity": {
+    "title": "Add Your Community",
+    "subtitle": "Follow these steps to add your tech community to TechHubs Spain",
+    "steps": {
+      "fork": "Fork the TechHubsES repository on GitHub.",
+      "clone": "Clone your forked repository to your local machine.",
+      "branch": "Create a new branch for your changes.",
+      "template": "Take the template from \"community.example.json\", duplicate it and add your community information.",
+      "addJson": "Add the new community information to the /data/communities.json JSON file.",
+      "place": "Place your community json on `/public/data/communities`",
+      "commit": "Commit your changes and push to your forked repository.",
+      "pr": "Create a Pull Request (PR) from your fork to the main TechHubsES repository."
+    },
+    "instructions": "For more detailed instructions and to access the repository, please visit our GitHub page:",
+    "viewOnGitHub": "View on GitHub"
+  },
+  "Communities": {
+    "title": "Tech Communities",
+    "subtitle": "Discover and connect with tech communities across Spain",
+    "viewDetails": "View details",
+    "filter": "All",
+    "filterByProvince": "Filter by province",
+    "allCategories": "All",
+    "allProvinces": "All"
+  },
+  "Events": {
+    "title": "Connect with the",
+    "country": "Spanish community",
+    "subtitle": "Discover events, meetups and tech conferences across Spain. Connect with professionals, learn new technologies and become part of the most active tech community in the country.",
+    "next": "Next Tech Events",
+    "nextDescription": "Discover and participate in the most important tech events in Spain",
+    "viewEvent": "See on Luma",
+    "by": "by",
+    "attendees": "attendees",
+    "location": "Location",
+    "date": "Date",
+    "tags": "Tags"
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Have a question or suggestion? We'd love to hear from you",
+    "email": "Email",
+    "github": "GitHub",
+    "twitter": "X (Twitter)"
+  },
+  "Footer": {
+    "about": "About TechHubs Spain",
+    "aboutDescription": "TechHubs Spain is a community-driven project showcasing tech communities across Spain.",
+    "importantLinks": "Important Links",
+    "addNewCommunity": "Add New Community",
+    "aboutUs": "About",
+    "contact": "Contact",
+    "connect": "Connect",
+    "githubRepository": "GitHub Repository",
+    "copyright": "© {year} TechHubs Spain. All rights reserved."
+  },
+  "Common": {
+    "backToHome": "Back to home",
+    "previous": "Previous",
+    "previousLabel": "Go to previous page",
+    "next": "Next",
+    "nextLabel": "Go to next page"
+  },
+  "Community": {
+    "members": "members",
+    "website": "Website",
+    "visitWebsite": "Visit website",
+    "followOnTwitter": "Follow on Twitter",
+    "joinWhatsApp": "Join WhatsApp",
+    "joinTelegram": "Join Telegram",
+    "joinDiscord": "Join Discord",
+    "connectWith": "Connect with {name}",
+    "location": "Location",
+    "category": "Category",
+    "description": "Description",
+    "notFoundTitle": "Community",
+    "notFoundSubtitle": "Not Found",
+    "notFoundDescription": "The community you are looking for doesn't exist or has been deleted.",
+    "notFoundBackButton": "Back to Communities"
+  },
+  "NotFound": {
+    "title": "404",
+    "subtitle": "Not Found",
+    "description": "The page you are looking for doesn't exist."
+  }
+}
