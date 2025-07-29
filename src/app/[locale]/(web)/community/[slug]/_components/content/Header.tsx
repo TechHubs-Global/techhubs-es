@@ -28,7 +28,7 @@ export default function CommunityHeader({
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-primary">
           {name}
         </h1>
-        <div className="flex items-center gap-2 text-gray-600">
+        <div className="flex items-center gap-2 text-muted-foreground">
           <MapPin className="h-4 w-4" />
           <span>{province}</span>
         </div>
@@ -38,7 +38,7 @@ export default function CommunityHeader({
       </Badge>
       <div className="space-y-4">
         <h2 className="text-xl font-semibold tracking-tight">Description</h2>
-        <p className="text-base text-gray-600 leading-relaxed">
+        <p className="text-base text-muted-foreground leading-relaxed">
           {fullDescription}
         </p>
       </div>
