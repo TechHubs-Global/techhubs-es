@@ -44,6 +44,8 @@
   "Communities": {
     "title": "Comunidades Tech",
     "subtitle": "Descubre y conecta con comunidades tecnológicas en España",
+    "metaTitle": "Comunidades Tech en España | TechHubs España",
+    "metaDescription": "Descubre y conecta con las mejores comunidades tecnológicas de España. Encuentra meetups, eventos y oportunidades de networking en tu área.",
     "viewDetails": "Ver detalles",
     "filter": "Todo",
     "filterByProvince": "Filtrar por provincia",
@@ -100,6 +102,8 @@
     "location": "Ubicación",
     "category": "Categoría",
     "description": "Descripción",
+    "metaTitle": "{name} - Comunidad Tech en {province}",
+    "metaDescription": "Conecta con {name}, una comunidad tecnológica de {category} en {province}. {description}",
     "notFoundTitle": "Comunidad",
     "notFoundSubtitle": "No encontrada",
     "notFoundDescription": "La comunidad que estás buscando no existe o ha sido eliminada.",

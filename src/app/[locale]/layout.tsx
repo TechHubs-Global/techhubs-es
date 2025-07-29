@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("subtitle"),
       url: "https://techhubs.es",
       siteName: "TechHubs Spain",
-      locale: locale,
+      locale: locale === "es" ? "es_ES" : "en_US",
       type: "website",
     },
     twitter: {
@@ -87,6 +87,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${t("title")} ${t("country")}`,
       description: t("subtitle"),
     },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    metadataBase: new URL('https://techhubs.es'),
   };
 }
 
