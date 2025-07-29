@@ -1,25 +1,25 @@
-'use client';
+"use client";
 
-import { useCallback, useRef, useMemo, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { AnimatePresence, motion } from 'motion/react';
+import { useCallback, useRef, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
+import { AnimatePresence, motion } from "motion/react";
 import {
   ComposableMap,
   Geographies,
   Geography,
   Marker,
   ZoomableGroup,
-} from 'react-simple-maps';
-import { geoMercator } from 'd3-geo';
+} from "react-simple-maps";
+import { geoMercator } from "d3-geo";
 
-import { useIsMobile } from '@/hooks/use-is-mobile';
-import type { Community } from '@/types/community';
+import { useIsMobile } from "@/hooks/use-is-mobile";
+import type { Community } from "@/types/community";
 
-const geoUrl = '/spain-provinces.geojson';
+const geoUrl = "/spain-provinces.geojson";
 
 type TooltipContent =
-  | { type: 'single'; community: Community }
-  | { type: 'cluster'; communities: Community[] };
+  | { type: "single"; community: Community }
+  | { type: "cluster"; communities: Community[] };
 
 interface TooltipPosition {
   x: number;
@@ -33,8 +33,8 @@ interface SpainMapProps {
 
 const formatCommunityName = (name: string) => {
   return name
-    .replace(/[^\w\s]/g, '') // Elimina caracteres no alfanuméricos ni espacios
-    .replace(/\s+/g, '-') // Reemplaza los espacios por guiones
+    .replace(/[^\w\s]/g, "") // Elimina caracteres no alfanuméricos ni espacios
+    .replace(/\s+/g, "-") // Reemplaza los espacios por guiones
     .toLowerCase(); // Convierte todo a minúsculas (opcional)
 };
 
@@ -46,7 +46,7 @@ export default function SpainMap({
   const mapRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [tooltipContent, setTooltipContent] = useState<TooltipContent | null>(
-    null,
+    null
   );
   const [tooltipPosition, setTooltipPosition] = useState<TooltipPosition>({
     x: 0,
@@ -65,7 +65,7 @@ export default function SpainMap({
         .scale(isMobile ? 1200 : 1800) // Escala ajustada para España
         .center([-3.5, 40.0]) // Centro de España (aproximadamente Madrid)
         .translate([width / 2, height / 2]),
-    [isMobile, width, height],
+    [isMobile, width, height]
   );
 
   // Clusterizamos las comunidades cercanas (en píxeles)
@@ -120,14 +120,14 @@ export default function SpainMap({
           y: markerRect.top - mapRect.top,
         });
         setTooltipContent(content);
-        if (content.type === 'single') {
+        if (content.type === "single") {
           onHoverCommunity(content.community.slug);
         } else {
           onHoverCommunity(null);
         }
       }
     },
-    [onHoverCommunity],
+    [onHoverCommunity]
   );
 
   // Cierra el tooltip
@@ -142,15 +142,13 @@ export default function SpainMap({
       closeTooltip();
       router.push(`/community/${communityId}`);
     },
-    [closeTooltip, router],
+    [closeTooltip, router]
   );
 
   // Si el usuario toca fuera del tooltip, se cierra
   const handleMapClick = useCallback(
     (
-      event:
-        | React.MouseEvent<HTMLDivElement>
-        | React.TouchEvent<HTMLDivElement>,
+      event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
     ) => {
       if (
         tooltipRef.current &&
@@ -161,28 +159,28 @@ export default function SpainMap({
       }
       closeTooltip();
     },
-    [closeTooltip],
+    [closeTooltip]
   );
 
   return (
     <div
       ref={mapRef}
-      className='relative w-full h-full flex items-center justify-center p-2 bg-card border border-border rounded-xl shadow-sm'
+      className="relative w-full h-full flex items-center justify-center p-2 bg-card border border-border rounded-xl shadow-sm"
       onClick={handleMapClick}
       onTouchStart={handleMapClick}
     >
       <ComposableMap
-        projection='geoMercator'
+        projection="geoMercator"
         projectionConfig={{
           scale: isMobile ? 1200 : 1800,
           center: [-3.5, 40.0],
         }} // Configuración para España
         width={width}
         height={height}
-        className='w-full h-full'
+        className="w-full h-full"
       >
         <ZoomableGroup center={[-3.5, 40.0]} zoom={1} minZoom={1} maxZoom={8}>
-          {' '}
+          {" "}
           {/* Centro de España */}
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -190,15 +188,15 @@ export default function SpainMap({
                 <Geography
                   key={geo.rsmKey || `geo-${index}`}
                   geography={geo}
-                  className='fill-muted stroke-border transition-colors duration-200'
+                  className="fill-muted stroke-border transition-colors duration-200"
                   strokeWidth={0.8}
                   style={{
-                    default: { outline: 'none' },
+                    default: { outline: "none" },
                     hover: {
-                      fill: 'hsl(var(--muted)/0.9)',
-                      transition: 'all 250ms',
+                      fill: "hsl(var(--muted)/0.9)",
+                      transition: "all 250ms",
                     },
-                    pressed: { outline: 'none' },
+                    pressed: { outline: "none" },
                   }}
                 />
               ))
@@ -225,18 +223,18 @@ export default function SpainMap({
                   >
                     <motion.circle
                       r={isMobile ? 4 : 5}
-                      className='fill-primary stroke-primary-foreground hover:fill-primary/90 cursor-pointer'
+                      className="fill-primary stroke-primary-foreground hover:fill-primary/90 cursor-pointer"
                       strokeWidth={2}
                       initial={{ scale: 0, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{
-                        type: 'spring',
+                        type: "spring",
                         stiffness: 260,
                         damping: 20,
                         delay: index * 0.05,
                       }}
                       onClick={(e) =>
-                        handleMarkerClick(e, { type: 'single', community })
+                        handleMarkerClick(e, { type: "single", community })
                       }
                     />
                   </Marker>
@@ -244,36 +242,40 @@ export default function SpainMap({
               } else {
                 return (
                   <Marker
-                    key={`cluster-${cluster.x.toFixed(2)}-${cluster.y.toFixed(2)}-${cluster.communities.map((c) => c.slug || c.name).join('-')}`}
+                    key={`cluster-${cluster.x.toFixed(2)}-${cluster.y.toFixed(
+                      2
+                    )}-${cluster.communities
+                      .map((c) => c.slug || c.name)
+                      .join("-")}`}
                     coordinates={geoCoords!}
                   >
                     <motion.g
-                      className='cursor-pointer'
+                      className="cursor-pointer"
                       onClick={(e) =>
                         handleMarkerClick(e, {
-                          type: 'cluster',
+                          type: "cluster",
                           communities: cluster.communities,
                         })
                       }
                     >
                       <motion.circle
                         r={isMobile ? 8 : 10}
-                        className='fill-primary stroke-primary-foreground hover:fill-primary/90'
+                        className="fill-primary stroke-primary-foreground hover:fill-primary/90"
                         strokeWidth={2}
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         transition={{
-                          type: 'spring',
+                          type: "spring",
                           stiffness: 260,
                           damping: 20,
                           delay: index * 0.05,
                         }}
                       />
                       <text
-                        textAnchor='middle'
+                        textAnchor="middle"
                         y={isMobile ? 4 : 5}
-                        className='font-bold text-primary-foreground text-xs pointer-events-none'
-                        style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
+                        className="font-bold text-primary-foreground text-xs pointer-events-none"
+                        style={{ textShadow: "0 1px 2px rgba(0,0,0,0.3)" }}
                       >
                         {cluster.communities.length}
                       </text>
@@ -292,57 +294,55 @@ export default function SpainMap({
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
-            className='absolute z-50 bg-popover border border-border rounded-lg shadow-lg p-3 px-4 max-w-[250px] min-w-[150px] pointer-events-auto'
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute z-50 bg-popover border border-border rounded-lg shadow-lg p-3 px-4 max-w-[250px] min-w-[150px] pointer-events-auto"
             style={{
               left: `${tooltipPosition.x}px`,
               top: `${tooltipPosition.y}px`,
-              transform: 'translate(-50%, -110%)',
+              transform: "translate(-50%, -110%)",
             }}
           >
             <button
-              className='absolute top-1 right-1 text-muted-foreground hover:text-foreground transition-colors'
+              className="absolute top-1 right-1 text-gray-600 hover:text-foreground transition-colors"
               onClick={closeTooltip}
-              aria-label='Close tooltip'
+              aria-label="Close tooltip"
             >
               ×
             </button>
-            {tooltipContent.type === 'single' ? (
-              <div className='flex flex-col gap-2'>
-                <p className='font-medium text-sm text-popover-foreground'>
+            {tooltipContent.type === "single" ? (
+              <div className="flex flex-col gap-2">
+                <p className="font-medium text-sm text-popover-foreground">
                   {tooltipContent.community.name}
                 </p>
-                <p className='text-xs flex items-center gap-1 text-muted-foreground'>
-                  <span className='w-2 h-2 rounded-full bg-primary' />
+                <p className="text-xs flex items-center gap-1 text-gray-600">
+                  <span className="w-2 h-2 rounded-full bg-primary" />
                   {tooltipContent.community.province}
                 </p>
                 <button
                   onClick={() =>
                     navigateToCommunity(
-                      formatCommunityName(tooltipContent.community.name),
+                      formatCommunityName(tooltipContent.community.name)
                     )
                   }
-                  className='mt-2 px-3 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors'
+                  className="mt-2 px-3 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
                 >
                   Seleccionar
                 </button>
               </div>
             ) : (
-              <div className='flex flex-col gap-2'>
+              <div className="flex flex-col gap-2">
                 {tooltipContent.communities.map((comm: Community, index) => (
                   <div
                     key={`${comm.slug || comm.name}-${index}`}
-                    className='cursor-pointer hover:underline p-1 rounded hover:bg-accent hover:text-accent-foreground transition-colors'
+                    className="cursor-pointer hover:underline p-1 rounded hover:bg-accent hover:text-accent-foreground transition-colors"
                     onClick={() =>
                       navigateToCommunity(formatCommunityName(comm.name))
                     }
                   >
-                    <p className='font-medium text-sm text-popover-foreground'>
+                    <p className="font-medium text-sm text-popover-foreground">
                       {comm.name}
                     </p>
-                    <p className='text-xs text-muted-foreground'>
-                      {comm.province}
-                    </p>
+                    <p className="text-xs text-gray-600">{comm.province}</p>
                   </div>
                 ))}
               </div>

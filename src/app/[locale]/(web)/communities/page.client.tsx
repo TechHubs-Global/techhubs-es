@@ -28,9 +28,12 @@ interface CommunitiesPageClientProps {
   communities: Community[];
 }
 
-export default function CommunitiesPageClient({ communities }: CommunitiesPageClientProps) {
+export default function CommunitiesPageClient({
+  communities,
+}: CommunitiesPageClientProps) {
   const t = useTranslations("Communities");
-  const [filteredCommunities, setFilteredCommunities] = useState<Community[]>(communities);
+  const [filteredCommunities, setFilteredCommunities] =
+    useState<Community[]>(communities);
   const [categories, setCategories] = useState<string[]>(["all"]);
   const [provinces, setProvinces] = useState<string[]>(["all"]);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -68,9 +71,9 @@ export default function CommunitiesPageClient({ communities }: CommunitiesPageCl
   };
 
   // Helper function to get translated text for category/province
-  const getDisplayText = (value: string, type: 'category' | 'province') => {
+  const getDisplayText = (value: string, type: "category" | "province") => {
     if (value === "all") {
-      return type === 'category' ? t("allCategories") : t("allProvinces");
+      return type === "category" ? t("allCategories") : t("allProvinces");
     }
     return capitalize(value);
   };
@@ -88,7 +91,7 @@ export default function CommunitiesPageClient({ communities }: CommunitiesPageCl
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
                 {t("title")}
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 {t("subtitle")}
               </p>
             </motion.div>
@@ -119,7 +122,7 @@ export default function CommunitiesPageClient({ communities }: CommunitiesPageCl
                         "hover:bg-accent/10"
                       )}
                     >
-                      {getDisplayText(category, 'category')}
+                      {getDisplayText(category, "category")}
                     </TabsTrigger>
                   ))}
                 </TabsList>
@@ -132,7 +135,7 @@ export default function CommunitiesPageClient({ communities }: CommunitiesPageCl
                 <SelectContent>
                   {provinces.map((province) => (
                     <SelectItem key={province} value={province}>
-                      {getDisplayText(province, 'province')}
+                      {getDisplayText(province, "province")}
                     </SelectItem>
                   ))}
                 </SelectContent>

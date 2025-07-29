@@ -25,7 +25,7 @@ interface EventCardProps {
 
 const EventCard = memo(({ event, variants }: EventCardProps) => {
   const t = useTranslations("Events");
-  
+
   const handleEventClick = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -60,7 +60,10 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
         {/* Event Tags */}
-        <div className="absolute top-4 left-4 flex flex-wrap gap-2" aria-label={t("tags")}>
+        <div
+          className="absolute top-4 left-4 flex flex-wrap gap-2"
+          aria-label={t("tags")}
+        >
           {event.tags.slice(0, 2).map((tag, tagIndex) => (
             <span
               key={tagIndex}
@@ -72,7 +75,10 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
         </div>
 
         {/* Attendees Count */}
-        <div className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-background/20 backdrop-blur-sm rounded-full" aria-label={t("attendees")}>
+        <div
+          className="absolute top-4 right-4 flex items-center gap-1 px-3 py-1 bg-background/20 backdrop-blur-sm rounded-full"
+          aria-label={t("attendees")}
+        >
           <Users className="w-4 h-4 text-white" />
           <span className="text-white text-xs font-medium">
             {event.attendees}
@@ -84,7 +90,7 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-3" aria-label={t("date")}>
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span className="text-muted-foreground text-sm font-medium">
+          <span className="text-gray-600 text-sm font-medium">
             {event.date}
           </span>
         </div>
@@ -93,13 +99,14 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
           {event.title}
         </h4>
 
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-1">
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">
           {event.description}
         </p>
 
         <div className="flex items-center justify-between mb-4">
-          <span className="text-muted-foreground text-sm">
-            {t("by")} <span className="font-medium text-foreground">{event.host}</span>
+          <span className="text-gray-600 text-sm">
+            {t("by")}{" "}
+            <span className="font-medium text-foreground">{event.host}</span>
           </span>
         </div>
 
@@ -109,14 +116,12 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
             <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
               <MapPin className="w-4 h-4" />
             </div>
-            <span className="text-muted-foreground text-sm">
-              {event.location}
-            </span>
+            <span className="text-gray-600 text-sm">{event.location}</span>
           </div>
 
           <div className="pt-4 border-t border-border">
             <div className="flex items-center justify-between">
-              <span className="text-muted-foreground text-sm">{t("viewEvent")}</span>
+              <span className="text-gray-600 text-sm">{t("viewEvent")}</span>
               <ChevronRight className="w-4 h-4" />
             </div>
           </div>
