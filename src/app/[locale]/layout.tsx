@@ -54,7 +54,6 @@ const geistMono = Geist_Mono({
   preload: false,
 });
 
-// Localized metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "HomePage" });
@@ -91,7 +90,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Static rendering for all locales
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -106,7 +104,6 @@ export default async function RootLayout({
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
   return (
