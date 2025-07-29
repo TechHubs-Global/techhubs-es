@@ -18,26 +18,22 @@ import XformerlyTwitter from "@/components/icons/x-formerly-twitter";
 const cardVariants = {
   hidden: {
     opacity: 0,
-    y: 20,
-    scale: 0.95,
+    y: 10,
   },
   show: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      type: "spring" as const,
-      stiffness: 100,
-      damping: 15,
+      duration: 0.3,
+      ease: "easeOut" as const,
     },
   },
   hover: {
-    y: -5,
-    scale: 1.02,
+    y: -3,
+    scale: 1.01,
     transition: {
-      type: "spring" as const,
-      stiffness: 400,
-      damping: 10,
+      duration: 0.2,
+      ease: "easeOut" as const,
     },
   },
 };
@@ -128,7 +124,7 @@ export function CommunityCard({ community }: { community: Community }) {
         </CardHeader>
 
         <CardContent className="flex-1 space-y-4">
-          <motion.div className="space-y-2" layout>
+          <div className="space-y-2">
             <h3 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
               {community.name}
             </h3>
@@ -136,7 +132,7 @@ export function CommunityCard({ community }: { community: Community }) {
               <MapPin className="h-3.5 w-3.5" />
               {community.province}
             </p>
-          </motion.div>
+          </div>
           <p className="text-sm text-gray-600 line-clamp-3 group-hover:text-gray-600/80 transition-colors">
             {community.shortDescription}
           </p>

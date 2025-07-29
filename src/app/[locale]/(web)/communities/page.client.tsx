@@ -20,7 +20,7 @@ const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.1 },
+    transition: { staggerChildren: 0.05 },
   },
 };
 
@@ -83,24 +83,20 @@ export default function CommunitiesPageClient({
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="space-y-12">
           <div className="relative flex flex-col items-center text-center space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-4"
-            >
+            <div className="space-y-4">
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
                 {t("title")}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 {t("subtitle")}
               </p>
-            </motion.div>
+            </div>
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            transition={{ duration: 0.3 }}
             className="rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-4 md:p-6"
           >
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
