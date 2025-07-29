@@ -12,8 +12,8 @@ interface CommunityMembersProps {
 }
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
 export default function CommunityMembers({ members }: CommunityMembersProps) {
@@ -28,7 +28,7 @@ export default function CommunityMembers({ members }: CommunityMembersProps) {
           <motion.div
             key={index}
             variants={item}
-            whileHover={{ y: -4 }}
+            whileHover={{ y: -2 }}
             transition={{ duration: 0.2 }}
           >
             <Card className="min-h-[142px] group bg-card/50 backdrop-blur-sm border border-border/50 transition-all duration-300 hover:shadow-xl hover:border-primary/50">
@@ -43,6 +43,7 @@ export default function CommunityMembers({ members }: CommunityMembersProps) {
                     asChild
                     variant="ghost"
                     size="icon"
+                    aria-label={`GitHub: ${member.github}`}
                     className="hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     <a
@@ -59,6 +60,7 @@ export default function CommunityMembers({ members }: CommunityMembersProps) {
                     asChild
                     variant="ghost"
                     size="icon"
+                    aria-label={`X: @${member.twitter}`}
                     className="hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     <a
@@ -75,6 +77,7 @@ export default function CommunityMembers({ members }: CommunityMembersProps) {
                     asChild
                     variant="ghost"
                     size="icon"
+                    aria-label={`LinkedIn: /in/${member.linkedin}`}
                     className="hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     <a

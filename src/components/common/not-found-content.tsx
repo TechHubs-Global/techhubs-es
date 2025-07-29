@@ -15,7 +15,7 @@ const Globe = dynamic(
     loading: () => (
       <div className="w-full h-full animate-pulse bg-muted/20 rounded-full" />
     ),
-  },
+  }
 );
 
 interface NotFoundContentProps {
@@ -29,41 +29,46 @@ interface NotFoundContentProps {
   className?: string;
 }
 
-const ActionLinks = memo(({ 
-  showBackButton = true, 
-  backButtonText = "Go Back", 
-  backButtonHref = "/",
-  showHomeButton = true 
-}: Pick<NotFoundContentProps, 'showBackButton' | 'backButtonText' | 'backButtonHref' | 'showHomeButton'>) => {
-  const t = useTranslations("Common");
+const ActionLinks = memo(
+  ({
+    showBackButton = true,
+    backButtonText = "Go Back",
+    backButtonHref = "/",
+    showHomeButton = true,
+  }: Pick<
+    NotFoundContentProps,
+    "showBackButton" | "backButtonText" | "backButtonHref" | "showHomeButton"
+  >) => {
+    const t = useTranslations("Common");
 
-  return (
-    <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
-      {showBackButton && (
-        <Link
-          href={backButtonHref}
-          className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg hover:shadow-xl"
-        >
-          <ArrowLeft
-            className="h-4 w-4 transition-transform group-hover:-translate-x-1"
-            aria-hidden="true"
-          />
-          {backButtonText}
-        </Link>
-      )}
-      
-      {showHomeButton && (
-        <Link
-          href="/"
-          className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border/50 bg-background/80 backdrop-blur-md text-foreground font-medium hover:bg-background/90 hover:border-border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg"
-        >
-          <Home className="h-4 w-4" aria-hidden="true" />
-          {t("backToHome")}
-        </Link>
-      )}
-    </div>
-  );
-});
+    return (
+      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center pt-8">
+        {showBackButton && (
+          <Link
+            href={backButtonHref}
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg hover:shadow-xl"
+          >
+            <ArrowLeft
+              className="h-4 w-4 transition-transform group-hover:-translate-x-1"
+              aria-hidden="true"
+            />
+            {backButtonText}
+          </Link>
+        )}
+
+        {showHomeButton && (
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border/50 bg-background/80 backdrop-blur-md text-foreground font-medium hover:bg-background/90 hover:border-border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-all duration-200 shadow-lg"
+          >
+            <Home className="h-4 w-4" aria-hidden="true" />
+            {t("backToHome")}
+          </Link>
+        )}
+      </div>
+    );
+  }
+);
 
 ActionLinks.displayName = "ActionLinks";
 
@@ -72,7 +77,7 @@ const HelpText = memo(() => {
 
   return (
     <div className="pt-8">
-      <p className="text-sm text-muted-foreground drop-shadow-sm">
+      <p className="text-sm text-gray-600 drop-shadow-sm">
         Looking for something specific?{" "}
         <Link
           href="/communities"
@@ -117,59 +122,61 @@ const BackgroundGlobe = memo(() => {
 
 BackgroundGlobe.displayName = "BackgroundGlobe";
 
-const NotFoundContent = memo(({
-  title,
-  subtitle,
-  description,
-  showBackButton,
-  backButtonText,
-  backButtonHref,
-  showHomeButton,
-  className,
-}: NotFoundContentProps) => {
-  return (
-    <div className={className}>
-      <BackgroundGlobe />
+const NotFoundContent = memo(
+  ({
+    title,
+    subtitle,
+    description,
+    showBackButton,
+    backButtonText,
+    backButtonHref,
+    showHomeButton,
+    className,
+  }: NotFoundContentProps) => {
+    return (
+      <div className={className}>
+        <BackgroundGlobe />
 
-      <div
-        className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/60 z-5"
-        aria-hidden="true"
-      />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/60 z-5"
+          aria-hidden="true"
+        />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] container mx-auto px-4 py-8">
-        <section
-          className="text-center max-w-2xl mx-auto space-y-6"
-          aria-labelledby="not-found-title"
-        >
-          <header className="space-y-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-sm">
-              <span className="text-foreground">{title}</span>
-              <span className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent">
-                {" "}
-                {subtitle}
-              </span>
-            </h1>
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-[60vh] container mx-auto px-4 py-8">
+          <section
+            className="text-center max-w-2xl mx-auto space-y-6"
+            aria-labelledby="not-found-title"
+          >
+            <header className="space-y-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight drop-shadow-sm">
+                <span className="text-foreground">{title}</span>
+                <span className="bg-gradient-to-r from-red-600 to-yellow-500 bg-clip-text text-transparent">
+                  {" "}
+                  {subtitle}
+                </span>
+              </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-prose mx-auto drop-shadow-sm">
-              {description}
-            </p>
-          </header>
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-prose mx-auto drop-shadow-sm">
+                {description}
+              </p>
+            </header>
 
-          <ActionLinks
-            showBackButton={showBackButton}
-            backButtonText={backButtonText}
-            backButtonHref={backButtonHref}
-            showHomeButton={showHomeButton}
-          />
+            <ActionLinks
+              showBackButton={showBackButton}
+              backButtonText={backButtonText}
+              backButtonHref={backButtonHref}
+              showHomeButton={showHomeButton}
+            />
 
-          <HelpText />
-        </section>
+            <HelpText />
+          </section>
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);
 
 NotFoundContent.displayName = "NotFoundContent";
 
 export default NotFoundContent;
-export type { NotFoundContentProps }; 
+export type { NotFoundContentProps };

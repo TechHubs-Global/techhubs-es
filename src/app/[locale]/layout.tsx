@@ -28,44 +28,68 @@ type Props = {
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  fallback: [
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "sans-serif",
+  ],
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  fallback: [
+    "ui-monospace",
+    "SFMono-Regular",
+    "Monaco",
+    "Consolas",
+    "monospace",
+  ],
+  preload: false,
 });
 
-// Localized metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'HomePage' });
+  const t = await getTranslations({ locale, namespace: "HomePage" });
 
   return {
     title: {
       template: `TechHubs Spain | %s`,
-      default: `TechHubs Spain | ${t('title')} ${t('country')}`,
+      default: `TechHubs Spain | ${t("title")} ${t("country")}`,
     },
-    description: t('subtitle'),
-    keywords: ['tech', 'communities', 'spain', 'developers', 'meetups', 'events'],
-    authors: [{ name: 'TechHubs Spain' }],
-    creator: 'TechHubs Spain',
+    description: t("subtitle"),
+    keywords: [
+      "tech",
+      "communities",
+      "spain",
+      "developers",
+      "meetups",
+      "events",
+    ],
+    authors: [{ name: "TechHubs Spain" }],
+    creator: "TechHubs Spain",
     openGraph: {
-      title: `${t('title')} ${t('country')}`,
-      description: t('subtitle'),
-      url: 'https://techhubs.es',
-      siteName: 'TechHubs Spain',
+      title: `${t("title")} ${t("country")}`,
+      description: t("subtitle"),
+      url: "https://techhubs.es",
+      siteName: "TechHubs Spain",
       locale: locale,
-      type: 'website',
+      type: "website",
     },
     twitter: {
-      card: 'summary_large_image',
-      title: `${t('title')} ${t('country')}`,
-      description: t('subtitle'),
+      card: "summary_large_image",
+      title: `${t("title")} ${t("country")}`,
+      description: t("subtitle"),
     },
   };
 }
 
-// Static rendering for all locales
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
@@ -80,16 +104,16 @@ export default async function RootLayout({
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
   return (
     <html suppressHydrationWarning lang={locale}>
+      <Analytics />
       <body
         className={cn(
           `${geistSans.variable} ${geistMono.variable} antialiased`,
           "min-h-screen antialiased",
-          "dark:bg-black/[0.96] bg-zinc-100",
+          "dark:bg-black/[0.96] bg-zinc-100"
         )}
       >
         <NextIntlClientProvider>
@@ -101,7 +125,6 @@ export default async function RootLayout({
             </div>
             <Toaster />
           </ThemeProvider>
-          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>

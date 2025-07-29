@@ -8,15 +8,13 @@ type Props = {
   params: Promise<{ locale: Locale }>;
 };
 
-// Generate static params for all locales
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function CommunitiesPage({ params }: Props) {
   const { locale } = await params;
-  
-  // Enable static rendering
+
   setRequestLocale(locale);
 
   const communities = fetchCommunities();

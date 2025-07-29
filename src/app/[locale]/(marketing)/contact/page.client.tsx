@@ -62,19 +62,17 @@ export default function ContactPageClient({
         className="container mx-auto px-4 py-12"
       >
         <motion.div variants={item} className="text-center space-y-4 mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             {title}
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {subtitle}
-          </p>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
         <motion.div
           variants={item}
           className="relative group bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 md:p-8 shadow-lg mx-auto max-w-2xl"
         >
-          <div className="relative space-y-8">            
+          <div className="relative space-y-8">
             <div className="grid gap-4">
               {contactLinks.map((link) => (
                 <motion.a
@@ -92,7 +90,7 @@ export default function ContactPageClient({
                     "rounded-xl border border-border/50",
                     "bg-background/50 hover:bg-accent/5",
                     "transition-all duration-300",
-                    "hover:shadow-lg hover:border-primary/50",
+                    "hover:shadow-lg hover:border-primary/50"
                   )}
                 >
                   <div className="p-2 rounded-lg bg-primary/10 text-primary">
@@ -103,10 +101,10 @@ export default function ContactPageClient({
                     <h3 className="font-medium text-lg group-hover/link:text-primary transition-colors">
                       {link.title}
                     </h3>
-                    <p className="text-muted-foreground">{link.description}</p>
+                    <p className="text-gray-600">{link.description}</p>
                   </div>
 
-                  <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all" />
+                  <ArrowUpRight className="h-5 w-5 text-gray-600 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all" />
                 </motion.a>
               ))}
             </div>

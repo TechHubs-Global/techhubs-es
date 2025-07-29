@@ -47,17 +47,15 @@ const HeroSection = memo(
       <section className="relative overflow-hidden">
         <div className="container max-w-[1220px] w-full px-6 md:px-10 relative z-10 mx-auto">
           <motion.div
-            className={`grid grid-cols-1 gap-16 md:gap-8 w-full items-center ${layoutClasses}`}
+            className={`grid grid-cols-1 gap-16 w-full items-center ${layoutClasses}`}
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
             {/* Text Content */}
-            <motion.div
+            <div
               className={`flex flex-col items-start gap-4 mt-10 md:mt-0 max-w-[546px] mx-auto md:mx-0 ${textOrderClass}`}
-              variants={itemVariants}
-              transition={{ duration: 0.7, ease: "easeOut" }}
             >
               <div className="space-y-2 md:space-y-1">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-primary">
@@ -69,10 +67,8 @@ const HeroSection = memo(
                 </h2>
               </div>
 
-              <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-                {t("subtitle")}
-              </p>
-            </motion.div>
+              <p className="text-lg text-gray-600 max-w-2xl">{t("subtitle")}</p>
+            </div>
 
             <motion.div
               className={`relative mt-10 md:mt-0 mx-auto ${imageOrderClass} w-full max-w-[300px] md:max-w-[471px]`}
@@ -94,20 +90,23 @@ const HeroSection = memo(
                 }}
                 initial={{ y: reverseLayout ? 0 : 0 }}
                 whileInView={{ y: reverseLayout ? -20 : -30 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true, amount: 0.5 }}
               >
                 <Image
                   src={secondaryImageSrc}
                   alt="Luma events"
                   fill
+                  sizes="(max-width: 479px) 280px, (max-width: 767px) 300px, 450px"
+                  quality={50}
+                  loading="lazy"
                   className="w-full h-full object-cover rounded-[32px]"
                 />
               </motion.div>
 
               {/* Main image */}
               <motion.div
-                className="relative w-full h-[405px] md:h-[637px] bg-card/10 rounded-[32px] backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-10 overflow-hidden"
+                className="relative w-full h-[405px] md:h-[637px] bg-card/10 rounded-[32px] backdrop-blur-[15px] backdrop-brightness-[100%] border-0 z-50 overflow-hidden"
                 initial={{ y: reverseLayout ? 0 : 0 }}
                 whileInView={{ y: reverseLayout ? 20 : 30 }}
                 transition={{ duration: 1.2, ease: "easeOut", delay: 0.1 }}
@@ -124,6 +123,9 @@ const HeroSection = memo(
                       src={primaryImageSrc}
                       alt="Luma events"
                       fill
+                      priority
+                      sizes="(max-width: 479px) 280px, (max-width: 767px) 300px, 450px"
+                      quality={75}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -134,7 +136,7 @@ const HeroSection = memo(
         </div>
       </section>
     );
-  },
+  }
 );
 
 HeroSection.displayName = "HeroSection";

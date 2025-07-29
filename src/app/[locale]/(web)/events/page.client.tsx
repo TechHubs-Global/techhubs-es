@@ -7,7 +7,6 @@ interface EventsPageClientProps {
 }
 
 export default function EventsPageClient({ events }: EventsPageClientProps) {
-
   return (
     <div className="w-full">
       <HeroSection
@@ -18,4 +17,4 @@ export default function EventsPageClient({ events }: EventsPageClientProps) {
       <EventsList events={events} />
     </div>
   );
-} 
+}

@@ -15,30 +15,25 @@ import { Community } from "@/types/community";
 import { ArrowRight, Globe, MapPin } from "lucide-react";
 import XformerlyTwitter from "@/components/icons/x-formerly-twitter";
 
-
 const cardVariants = {
   hidden: {
     opacity: 0,
-    y: 20,
-    scale: 0.95,
+    y: 10,
   },
   show: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      type: "spring" as const,
-      stiffness: 100,
-      damping: 15,
+      duration: 0.3,
+      ease: "easeOut" as const,
     },
   },
   hover: {
-    y: -5,
-    scale: 1.02,
+    y: -3,
+    scale: 1.01,
     transition: {
-      type: "spring" as const,
-      stiffness: 400,
-      damping: 10,
+      duration: 0.2,
+      ease: "easeOut" as const,
     },
   },
 };
@@ -94,6 +89,7 @@ export function CommunityCard({ community }: { community: Community }) {
                   size="icon"
                   className="h-8 w-8 rounded-lg hover:bg-primary/10 transition-colors"
                   asChild
+                  aria-label={`Website: ${community.name}`}
                 >
                   <a
                     href={community.website}
@@ -111,6 +107,7 @@ export function CommunityCard({ community }: { community: Community }) {
                   size="icon"
                   className="h-8 w-8 rounded-lg hover:bg-primary/10 transition-colors"
                   asChild
+                  aria-label={`X: ${community.name}`}
                 >
                   <a
                     href={`https://x.com/${community.twitter}`}
@@ -127,16 +124,16 @@ export function CommunityCard({ community }: { community: Community }) {
         </CardHeader>
 
         <CardContent className="flex-1 space-y-4">
-          <motion.div className="space-y-2" layout>
-            <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
               {community.name}
-            </h2>
-            <p className="text-sm text-muted-foreground flex items-center gap-1.5">
+            </h3>
+            <p className="text-sm text-gray-600 flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5" />
               {community.province}
             </p>
-          </motion.div>
-          <p className="text-sm text-muted-foreground line-clamp-3 group-hover:text-muted-foreground/80 transition-colors">
+          </div>
+          <p className="text-sm text-gray-600 line-clamp-3 group-hover:text-gray-600/80 transition-colors">
             {community.shortDescription}
           </p>
         </CardContent>
