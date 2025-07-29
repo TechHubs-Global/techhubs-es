@@ -87,7 +87,7 @@ export default function CommunitiesPageClient({
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
                 {t("title")}
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t("subtitle")}
               </p>
             </div>

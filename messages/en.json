@@ -44,6 +44,8 @@
   "Communities": {
     "title": "Tech Communities",
     "subtitle": "Discover and connect with tech communities across Spain",
+    "metaTitle": "Tech Communities in Spain",
+    "metaDescription": "Discover and connect with the best tech communities across Spain. Find meetups, events, and networking opportunities in your area.",
     "viewDetails": "View details",
     "filter": "All",
     "filterByProvince": "Filter by province",
@@ -100,6 +102,8 @@
     "location": "Location",
     "category": "Category",
     "description": "Description",
+    "metaTitle": "{name} - Tech Community in {province}",
+    "metaDescription": "Connect with {name}, a {category} community in {province}. {description}",
     "notFoundTitle": "Community",
     "notFoundSubtitle": "Not Found",
     "notFoundDescription": "The community you are looking for doesn't exist or has been deleted.",

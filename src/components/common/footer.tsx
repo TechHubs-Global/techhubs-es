@@ -23,7 +23,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold tracking-tight">
               {t("about")}
             </h3>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {t("aboutDescription")}
             </p>
           </div>
@@ -42,7 +42,7 @@ export default function Footer() {
                   <Link
                     href={href}
                     className={cn(
-                      "text-sm text-gray-600",
+                      "text-sm text-muted-foreground",
                       "hover:text-primary transition-colors duration-200",
                       "flex items-center gap-2"
                     )}
@@ -64,7 +64,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className={cn(
                 "group flex items-center gap-2",
-                "text-sm text-gray-600",
+                "text-sm text-muted-foreground",
                 "hover:text-primary transition-colors duration-200"
               )}
             >
@@ -75,7 +75,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-border/50">
-          <p className="text-center text-sm text-gray-600">
+          <p className="text-center text-sm text-muted-foreground">
             {t("copyright", { year: new Date().getFullYear() })}
           </p>
         </div>

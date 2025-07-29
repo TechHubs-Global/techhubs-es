@@ -9,7 +9,7 @@ export function CommunityInfo({ community }: { community: Community }) {
         <h3 className="text-lg font-semibold tracking-tight">
           {community.name}
         </h3>
-        <p className="text-sm text-gray-600 flex items-center gap-1">
+        <p className="text-sm text-muted-foreground flex items-center gap-1">
           <MapPin className="h-3 w-3" />
           {community.province}
         </p>

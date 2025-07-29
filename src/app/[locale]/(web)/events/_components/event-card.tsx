@@ -90,7 +90,7 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-2 mb-3" aria-label={t("date")}>
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span className="text-gray-600 text-sm font-medium">
+          <span className="text-muted-foreground text-sm font-medium">
             {event.date}
           </span>
         </div>
@@ -99,12 +99,12 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
           {event.title}
         </h4>
 
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">
+        <p className="text-muted-foreground text-sm mb-4 line-clamp-3 flex-1">
           {event.description}
         </p>
 
         <div className="flex items-center justify-between mb-4">
-          <span className="text-gray-600 text-sm">
+          <span className="text-muted-foreground text-sm">
             {t("by")}{" "}
             <span className="font-medium text-foreground">{event.host}</span>
           </span>
@@ -116,12 +116,12 @@ const EventCard = memo(({ event, variants }: EventCardProps) => {
             <div className="w-6 h-6 bg-muted rounded-full flex items-center justify-center">
               <MapPin className="w-4 h-4" />
             </div>
-            <span className="text-gray-600 text-sm">{event.location}</span>
+            <span className="text-muted-foreground text-sm">{event.location}</span>
           </div>
 
           <div className="pt-4 border-t border-border">
             <div className="flex items-center justify-between">
-              <span className="text-gray-600 text-sm">{t("viewEvent")}</span>
+              <span className="text-muted-foreground text-sm">{t("viewEvent")}</span>
               <ChevronRight className="w-4 h-4" />
             </div>
           </div>

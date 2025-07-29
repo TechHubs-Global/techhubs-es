@@ -64,7 +64,7 @@ export default function AddCommunityPageClient({
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             {title}
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
         <motion.div
@@ -81,7 +81,7 @@ export default function AddCommunityPageClient({
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary font-medium transition-colors group-hover/item:bg-primary/20">
                   {index + 1}
                 </span>
-                <span className="flex-1 pt-1 text-gray-600 group-hover/item:text-foreground transition-colors">
+                <span className="flex-1 pt-1 text-muted-foreground group-hover/item:text-foreground transition-colors">
                   {step}
                 </span>
               </motion.li>
@@ -89,7 +89,7 @@ export default function AddCommunityPageClient({
           </ol>
 
           <div className="space-y-6">
-            <p className="text-lg text-gray-600">{instructions}</p>
+            <p className="text-lg text-muted-foreground">{instructions}</p>
 
             <Button
               asChild

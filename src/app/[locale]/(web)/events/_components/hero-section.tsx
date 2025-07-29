@@ -67,7 +67,7 @@ const HeroSection = memo(
                 </h2>
               </div>
 
-              <p className="text-lg text-gray-600 max-w-2xl">{t("subtitle")}</p>
+              <p className="text-lg text-muted-foreground max-w-2xl">{t("subtitle")}</p>
             </div>
 
             <motion.div
