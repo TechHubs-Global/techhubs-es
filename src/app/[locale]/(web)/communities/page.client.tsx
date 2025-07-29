@@ -88,9 +88,9 @@ export default function CommunitiesPageClient({
               animate={{ opacity: 1, y: 0 }}
               className="space-y-4"
             >
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
                 {t("title")}
-              </h1>
+              </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 {t("subtitle")}
               </p>
@@ -114,6 +114,9 @@ export default function CommunitiesPageClient({
                     <TabsTrigger
                       key={category}
                       value={category}
+                      aria-hidden={true}
+                      role="tab"
+                      aria-controls={`communities-${category}`}
                       className={cn(
                         "flex-shrink-0 px-4 py-2 rounded-lg",
                         "data-[state=active]:bg-primary/10",
@@ -129,7 +132,13 @@ export default function CommunitiesPageClient({
               </Tabs>
 
               <Select onValueChange={setSelectedProvince} defaultValue="all">
-                <SelectTrigger className="w-full md:w-[200px]">
+                <SelectTrigger
+                  className="w-full md:w-[200px]"
+                  aria-label={`${t("filterByProvince")}: ${getDisplayText(
+                    selectedProvince,
+                    "province"
+                  )}`}
+                >
                   <SelectValue placeholder={t("filterByProvince")} />
                 </SelectTrigger>
                 <SelectContent>

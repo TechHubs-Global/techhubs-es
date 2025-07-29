@@ -93,6 +93,7 @@ export function CommunityCard({ community }: { community: Community }) {
                   size="icon"
                   className="h-8 w-8 rounded-lg hover:bg-primary/10 transition-colors"
                   asChild
+                  aria-label={`Website: ${community.name}`}
                 >
                   <a
                     href={community.website}
@@ -110,6 +111,7 @@ export function CommunityCard({ community }: { community: Community }) {
                   size="icon"
                   className="h-8 w-8 rounded-lg hover:bg-primary/10 transition-colors"
                   asChild
+                  aria-label={`X: ${community.name}`}
                 >
                   <a
                     href={`https://x.com/${community.twitter}`}
@@ -127,9 +129,9 @@ export function CommunityCard({ community }: { community: Community }) {
 
         <CardContent className="flex-1 space-y-4">
           <motion.div className="space-y-2" layout>
-            <h2 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
+            <h3 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
               {community.name}
-            </h2>
+            </h3>
             <p className="text-sm text-gray-600 flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5" />
               {community.province}
