@@ -62,9 +62,9 @@ export default function ContactPageClient({
         className="container mx-auto px-4 py-12"
       >
         <motion.div variants={item} className="text-center space-y-4 mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             {title}
-          </h1>
+          </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
