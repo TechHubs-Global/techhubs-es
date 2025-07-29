@@ -58,10 +58,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const communityKeywords = [
     community.name.toLowerCase(),
-    community.category.toLowerCase(),
+    community.category.toLowerCase().replace(/\s+/g, '-'),
     community.province.toLowerCase(),
     "meetup",
     "networking",
+    "developers",
+    "tech-community",
   ];
 
   return {
@@ -95,6 +97,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CommunityPage({ params }: Props) {
   const { slug } = await params;
   const community = fetchCommunityBySlug(slug);
+  
   if (!community) {
     notFound();
   }

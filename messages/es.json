@@ -103,7 +103,7 @@
     "category": "Categoría",
     "description": "Descripción",
     "metaTitle": "{name} - Comunidad Tech en {province}",
-    "metaDescription": "Conecta con {name}, una comunidad tecnológica de {category} en {province}. {description}",
+    "metaDescription": "Conecta con {name}, una comunidad de {category} en {province}. {description}",
     "notFoundTitle": "Comunidad",
     "notFoundSubtitle": "No encontrada",
     "notFoundDescription": "La comunidad que estás buscando no existe o ha sido eliminada.",

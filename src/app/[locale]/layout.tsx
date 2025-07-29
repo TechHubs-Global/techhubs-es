@@ -91,7 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       index: true,
       follow: true,
     },
-    metadataBase: new URL('https://techhubs.es'),
+    metadataBase: new URL("https://techhubs.es"),
   };
 }
 
