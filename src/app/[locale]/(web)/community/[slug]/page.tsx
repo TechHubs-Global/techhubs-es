@@ -44,11 +44,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const truncatedDescription =
-    community.shortDescription.length > 150
-      ? community.shortDescription.substring(0, 147) + "..."
-      : community.shortDescription;
-
   const metaTitle = t("metaTitle", {
     name: community.name,
     province: community.province,
@@ -58,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     name: community.name,
     category: community.category,
     province: community.province,
-    description: truncatedDescription,
+    description: community.shortDescription,
   });
 
   const communityKeywords = [
