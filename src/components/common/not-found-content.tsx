@@ -77,7 +77,7 @@ const HelpText = memo(() => {
 
   return (
     <div className="pt-8">
-      <p className="text-sm text-gray-600 drop-shadow-sm">
+      <p className="text-sm text-muted-foreground drop-shadow-sm">
         Looking for something specific?{" "}
         <Link
           href="/communities"
@@ -156,7 +156,7 @@ const NotFoundContent = memo(
                 </span>
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-prose mx-auto drop-shadow-sm">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-prose mx-auto drop-shadow-sm">
                 {description}
               </p>
             </header>

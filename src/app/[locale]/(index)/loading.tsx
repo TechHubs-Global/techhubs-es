@@ -20,7 +20,7 @@ export default function HomePageLoading() {
                     Spain
                   </span>
                 </h1>
-                <h2 className="text-lg sm:text-xl text-gray-600 max-w-prose">
+                <h2 className="text-lg sm:text-xl text-muted-foreground max-w-prose">
                   Discover and connect with tech enthusiasts across the country
                 </h2>
                 <div className="pt-2">

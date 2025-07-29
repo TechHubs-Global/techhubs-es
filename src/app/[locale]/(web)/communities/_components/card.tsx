@@ -128,12 +128,12 @@ export function CommunityCard({ community }: { community: Community }) {
             <h3 className="text-xl font-semibold tracking-tight group-hover:text-primary transition-colors">
               {community.name}
             </h3>
-            <p className="text-sm text-gray-600 flex items-center gap-1.5">
+            <p className="text-sm text-muted-foreground flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5" />
               {community.province}
             </p>
           </div>
-          <p className="text-sm text-gray-600 line-clamp-3 group-hover:text-gray-600/80 transition-colors">
+          <p className="text-sm text-muted-foreground line-clamp-3 group-hover:text-muted-foreground/80 transition-colors">
             {community.shortDescription}
           </p>
         </CardContent>

@@ -303,7 +303,7 @@ export default function SpainMap({
             }}
           >
             <button
-              className="absolute top-1 right-1 text-gray-600 hover:text-foreground transition-colors"
+              className="absolute top-1 right-1 text-muted-foreground hover:text-foreground transition-colors"
               onClick={closeTooltip}
               aria-label="Close tooltip"
             >
@@ -314,7 +314,7 @@ export default function SpainMap({
                 <p className="font-medium text-sm text-popover-foreground">
                   {tooltipContent.community.name}
                 </p>
-                <p className="text-xs flex items-center gap-1 text-gray-600">
+                <p className="text-xs flex items-center gap-1 text-muted-foreground">
                   <span className="w-2 h-2 rounded-full bg-primary" />
                   {tooltipContent.community.province}
                 </p>
@@ -342,7 +342,7 @@ export default function SpainMap({
                     <p className="font-medium text-sm text-popover-foreground">
                       {comm.name}
                     </p>
-                    <p className="text-xs text-gray-600">{comm.province}</p>
+                    <p className="text-xs text-muted-foreground">{comm.province}</p>
                   </div>
                 ))}
               </div>

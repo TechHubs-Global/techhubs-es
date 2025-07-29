@@ -56,7 +56,7 @@ export default function AboutPageClient({
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             {title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
         <motion.div
@@ -65,10 +65,10 @@ export default function AboutPageClient({
         >
           <div className="space-y-8">
             <div className="space-y-6">
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 {description1}
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 {description2}
               </p>
             </div>
@@ -78,13 +78,13 @@ export default function AboutPageClient({
                 <h3 className="text-xl font-semibold text-foreground">
                   {mission}
                 </h3>
-                <p className="text-gray-600">{missionText}</p>
+                <p className="text-muted-foreground">{missionText}</p>
               </div>
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">
                   {vision}
                 </h3>
-                <p className="text-gray-600">{visionText}</p>
+                <p className="text-muted-foreground">{visionText}</p>
               </div>
             </div>
 
@@ -93,7 +93,9 @@ export default function AboutPageClient({
                 <h3 className="text-xl font-semibold text-foreground">
                   {joinUs}
                 </h3>
-                <p className="text-gray-600 max-w-2xl mx-auto">{joinUsText}</p>
+                <p className="text-muted-foreground max-w-2xl mx-auto">
+                  {joinUsText}
+                </p>
                 <Button
                   asChild
                   variant="outline"

@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Mail, Twitter, Github, ArrowUpRight } from "lucide-react";
+import { Mail, Github, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import XformerlyTwitter from "@/components/icons/x-formerly-twitter";
 
 interface ContactPageClientProps {
   title: string;
@@ -42,8 +43,8 @@ export default function ContactPageClient({
     {
       title: twitter,
       description: "@techhubses",
-      href: "https://twitter.com/techhubses",
-      icon: Twitter,
+      href: "https://x.com/techhubses",
+      icon: XformerlyTwitter,
     },
     {
       title: github,
@@ -65,7 +66,7 @@ export default function ContactPageClient({
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             {title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
         </motion.div>
 
         <motion.div
@@ -101,10 +102,10 @@ export default function ContactPageClient({
                     <h3 className="font-medium text-lg group-hover/link:text-primary transition-colors">
                       {link.title}
                     </h3>
-                    <p className="text-gray-600">{link.description}</p>
+                    <p className="text-muted-foreground">{link.description}</p>
                   </div>
 
-                  <ArrowUpRight className="h-5 w-5 text-gray-600 opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all" />
+                  <ArrowUpRight className="h-5 w-5 text-muted-foreground opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all" />
                 </motion.a>
               ))}
             </div>

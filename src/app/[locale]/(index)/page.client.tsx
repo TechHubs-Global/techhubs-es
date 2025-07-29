@@ -42,7 +42,7 @@ export default function HomePageClient({ communities }: HomePageClientProps) {
                 {t("country")}
               </span>
             </h1>
-            <h2 className="text-lg sm:text-xl text-gray-600 max-w-prose">
+            <h2 className="text-lg sm:text-xl text-muted-foreground max-w-prose">
               {t("subtitle")}
             </h2>
             <div className="pt-2">
