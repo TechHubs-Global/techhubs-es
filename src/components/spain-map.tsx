@@ -31,13 +31,6 @@ interface SpainMapProps {
   onHoverCommunity: (communityId: string | null) => void;
 }
 
-const formatCommunityName = (name: string) => {
-  return name
-    .replace(/[^\w\s]/g, "") // Elimina caracteres no alfanuméricos ni espacios
-    .replace(/\s+/g, "-") // Reemplaza los espacios por guiones
-    .toLowerCase(); // Convierte todo a minúsculas (opcional)
-};
-
 export default function SpainMap({
   communities,
   onHoverCommunity,
@@ -138,9 +131,10 @@ export default function SpainMap({
 
   // Navega a la comunidad seleccionada y cierra el tooltip
   const navigateToCommunity = useCallback(
-    (communityId: string) => {
+    (community: Community) => {
       closeTooltip();
-      router.push(`/community/${communityId}`);
+      const communitySlug = community.slug || community.name.toLowerCase().replace(/\s+/g, '-');
+      router.push(`/community/${communitySlug}`);
     },
     [closeTooltip, router]
   );
@@ -274,7 +268,7 @@ export default function SpainMap({
                       <text
                         textAnchor="middle"
                         y={isMobile ? 4 : 5}
-                        className="font-bold text-primary-foreground text-xs pointer-events-none"
+                        className="font-bold fill-white dark:fill-primary-foreground text-xs pointer-events-none"
                         style={{ textShadow: "0 1px 2px rgba(0,0,0,0.3)" }}
                       >
                         {cluster.communities.length}
@@ -295,7 +289,7 @@ export default function SpainMap({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute z-50 bg-popover border border-border rounded-lg shadow-lg p-3 px-4 max-w-[250px] min-w-[150px] pointer-events-auto"
+            className="absolute z-50 bg-popover border border-border rounded-lg shadow-lg p-3 pr-8 max-w-[250px] min-w-[150px] pointer-events-auto"
             style={{
               left: `${tooltipPosition.x}px`,
               top: `${tooltipPosition.y}px`,
@@ -303,7 +297,7 @@ export default function SpainMap({
             }}
           >
             <button
-              className="absolute top-1 right-1 text-muted-foreground hover:text-foreground transition-colors"
+              className="absolute top-2 right-2 text-muted-foreground hover:text-foreground transition-colors w-5 h-5 flex items-center justify-center"
               onClick={closeTooltip}
               aria-label="Close tooltip"
             >
@@ -319,11 +313,7 @@ export default function SpainMap({
                   {tooltipContent.community.province}
                 </p>
                 <button
-                  onClick={() =>
-                    navigateToCommunity(
-                      formatCommunityName(tooltipContent.community.name)
-                    )
-                  }
+                  onClick={() => navigateToCommunity(tooltipContent.community)}
                   className="mt-2 px-3 py-1 text-xs bg-primary text-primary-foreground rounded hover:bg-primary/90 transition-colors"
                 >
                   Seleccionar
@@ -335,9 +325,7 @@ export default function SpainMap({
                   <div
                     key={`${comm.slug || comm.name}-${index}`}
                     className="cursor-pointer hover:underline p-1 rounded hover:bg-accent hover:text-accent-foreground transition-colors"
-                    onClick={() =>
-                      navigateToCommunity(formatCommunityName(comm.name))
-                    }
+                    onClick={() => navigateToCommunity(comm)}
                   >
                     <p className="font-medium text-sm text-popover-foreground">
                       {comm.name}
